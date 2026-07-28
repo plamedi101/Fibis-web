@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibis Web — Nourriture africaine, mode & parfums d'Égypte | Livraison Égypte & Kinshasa</title>
+<meta name="description" content="Fibis Web : chikwang et nourriture africaine sur précommande, vêtements et accessoires, parfums et huiles essentielles d'Égypte. Livraison en Égypte et à Kinshasa.">
+<meta name="keywords" content="chikwang, nourriture africaine, précommande, vêtements wax, parfums Égypte, huiles essentielles, Kinshasa, Égypte">
+<meta property="og:title" content="Fibis Web — Saveurs & Style">
+<meta property="og:description" content="Nourriture africaine sur précommande, vêtements, accessoires, parfums et huiles essentielles d'Égypte. Livraison en Égypte et à Kinshasa.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141010'/%3E%3Ccircle cx='50' cy='50' r='28' fill='%23D9948A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#141010;
+    --black2:#1E1817;
+    --black3:#251E1C;
+    --pale-red:#D9948A;
+    --pale-red-deep:#B65C50;
+    --cream:#F4EAE4;
+    --offwhite:#FBF6F2;
+    --line: rgba(244,234,228,0.14);
+    --line-dark: rgba(20,16,16,0.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--offwhite);
+    color:var(--black);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-0.02em;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  img,svg{display:block;}
+
+  /* HEADER */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--black);color:var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 32px;max-width:1180px;margin:0 auto;
+  }
+  .logo{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;text-transform:uppercase;}
+  .logo span{color:var(--pale-red);}
+  .nav-links{display:flex;gap:34px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;}
+  .nav-links a{position:relative;padding:4px 0;}
+  .nav-links a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--pale-red);transition:width .25s ease;}
+  .nav-links a:hover:after{width:100%;}
+  .cart-btn{
+    display:flex;align-items:center;gap:8px;
+    border:1px solid var(--cream);border-radius:100px;
+    padding:9px 18px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;
+    background:transparent;color:var(--cream);cursor:pointer;
+    transition:background .2s, color .2s;
+  }
+  .cart-btn:hover{background:var(--pale-red);border-color:var(--pale-red);color:var(--black);}
+
+  /* HERO */
+  .hero{
+    background:var(--black);color:var(--cream);
+    padding:80px 32px 0;
+  }
+  .hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:end;padding-bottom:60px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:11px;
+    text-transform:uppercase;letter-spacing:0.14em;color:var(--pale-red);font-weight:600;margin-bottom:22px;
+  }
+  .eyebrow:before{content:"";width:20px;height:1px;background:var(--pale-red);}
+  .hero h1{font-size:clamp(40px,5.6vw,74px);line-height:0.97;margin-bottom:24px;}
+  .hero h1 .accent{color:var(--pale-red);}
+  .hero p{font-size:16px;max-width:420px;color:#cfc2bc;margin-bottom:30px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--pale-red);color:var(--black);
+    padding:15px 28px;border-radius:100px;font-size:13px;font-weight:700;
+    text-transform:uppercase;letter-spacing:0.03em;
+    display:inline-block;transition:transform .2s ease, background .2s;
+  }
+  .btn-primary:hover{background:var(--offwhite);transform:translateY(-2px);}
+  .btn-outline{
+    border:1px solid var(--cream);color:var(--cream);
+    padding:15px 28px;border-radius:100px;font-size:13px;font-weight:700;
+    text-transform:uppercase;letter-spacing:0.03em;
+  }
+  .btn-outline:hover{border-color:var(--pale-red);color:var(--pale-red);}
+
+  /* ticket signature element */
+  .ticket{
+    background:var(--black2);border:1px solid var(--line);border-radius:4px;
+    padding:26px;position:relative;
+  }
+  .ticket:before,.ticket:after{
+    content:"";position:absolute;width:22px;height:22px;background:var(--black);
+    border-radius:50%;top:50%;transform:translateY(-50%);
+  }
+  .ticket:before{left:-11px;}
+  .ticket:after{right:-11px;}
+  .ticket-dashes{border-top:1.5px dashed var(--line);margin:16px 0;}
+  .ticket-row{display:flex;justify-content:space-between;font-size:12px;color:#cfc2bc;margin-bottom:6px;}
+  .ticket-title{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:700;margin-bottom:4px;}
+  .ticket-sub{font-size:12px;color:#a89b95;margin-bottom:14px;}
+  .ticket-price{font-family:'JetBrains Mono',monospace;font-size:22px;color:var(--pale-red);}
+
+  /* section band selectors */
+  .band-tabs{
+    display:flex;border-top:1px solid var(--line);
+  }
+  .band-tab{
+    flex:1;padding:16px 32px;text-align:center;font-size:12px;font-weight:600;
+    text-transform:uppercase;letter-spacing:0.08em;color:#a89b95;
+    border-right:1px solid var(--line);
+  }
+  .band-tab:last-child{border-right:none;}
+  .band-tab.active{color:var(--pale-red);}
+
+  /* SECTIONS */
+  section{padding:80px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:16px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px);}
+  .section-head p{font-size:14px;color:#6b6058;max-width:380px;}
+  .section-head .num{font-family:'JetBrains Mono',monospace;color:var(--pale-red-deep);font-size:13px;}
+
+  /* PREORDER GRID */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .food-card{
+    background:var(--offwhite);border:1px solid var(--line-dark);border-radius:4px;
+    overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .food-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,16,16,0.1);}
+  .food-visual{
+    aspect-ratio:4/3;background:var(--cream);display:flex;align-items:center;justify-content:center;
+    border-bottom:1px solid var(--line-dark);position:relative;
+  }
+  .preorder-tag{
+    position:absolute;top:12px;left:12px;font-family:'JetBrains Mono',monospace;
+    font-size:10px;background:var(--black);color:var(--pale-red);
+    padding:5px 10px;border-radius:100px;letter-spacing:0.03em;
+  }
+  .food-body{padding:20px;}
+  .food-cat{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--pale-red-deep);font-weight:700;margin-bottom:6px;}
+  .food-title{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:700;margin-bottom:6px;}
+  .food-desc{font-size:13px;color:#6b6058;margin-bottom:16px;}
+  .food-footer{display:flex;align-items:center;justify-content:space-between;}
+  .price{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;}
+  .add-btn{
+    padding:10px 18px;border-radius:100px;border:1px solid var(--black);
+    background:transparent;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;
+    cursor:pointer;transition:background .2s, color .2s;
+  }
+  .add-btn:hover{background:var(--black);color:var(--pale-red);}
+
+  /* FASHION SECTION (dark band) */
+  .fashion-band{background:var(--black);color:var(--cream);}
+  .fashion-band .section-head p{color:#a89b95;}
+  .fashion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .fashion-card{
+    background:var(--black2);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .fashion-card:hover{transform:translateY(-4px);border-color:var(--pale-red);}
+  .fashion-visual{
+    aspect-ratio:3/4;background:var(--black3);display:flex;align-items:center;justify-content:center;
+    border-bottom:1px solid var(--line);
+  }
+  .fashion-body{padding:16px;}
+  .fashion-cat{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--pale-red);font-weight:600;margin-bottom:6px;}
+  .fashion-title{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:600;margin-bottom:10px;}
+  .fashion-footer{display:flex;justify-content:space-between;align-items:center;}
+  .fashion-footer .price{color:var(--cream);}
+  .mini-add{
+    width:32px;height:32px;border-radius:50%;border:1px solid var(--cream);
+    background:transparent;color:var(--cream);font-size:16px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:background .2s,color .2s;
+  }
+  .mini-add:hover{background:var(--pale-red);color:var(--black);border-color:var(--pale-red);}
+
+  /* HOW IT WORKS (preorder process) */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .step{border-top:2px solid var(--black);padding-top:18px;}
+  .step .n{font-family:'JetBrains Mono',monospace;color:var(--pale-red-deep);font-size:13px;margin-bottom:10px;display:block;}
+  .step h3{font-size:18px;margin-bottom:8px;}
+  .step p{font-size:13px;color:#6b6058;}
+
+  /* FOOTER */
+  footer{background:var(--black);color:var(--cream);padding-top:60px;padding-bottom:32px;}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
+  .foot-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;color:var(--pale-red);}
+  .foot-col a,.foot-col p{display:block;font-size:14px;color:#cfc2bc;margin-bottom:10px;}
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:24px;border-top:1px solid var(--line);
+    font-size:12px;color:#8a8375;flex-wrap:wrap;gap:12px;
+  }
+
+  /* TOAST */
+  #toast{
+    position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);
+    background:var(--black);color:var(--pale-red);
+    padding:14px 24px;border-radius:100px;font-size:13px;
+    opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;
+    font-family:'JetBrains Mono',monospace;border:1px solid var(--pale-red);
+    z-index:100;
+  }
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  @media(max-width:920px){
+    .hero-inner{grid-template-columns:1fr;}
+    .ticket{order:-1;}
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .fashion-grid{grid-template-columns:repeat(2,1fr);}
+    .steps{grid-template-columns:1fr;}
+    .foot-top{grid-template-columns:1fr 1fr;}
+    .nav-links{display:none;}
+    .band-tabs{flex-wrap:wrap;}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Fibis<span>Web</span></div>
+    <div class="nav-links">
+      <a href="#nourriture">Nourriture</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#parfums">Parfums</a>
+      <a href="#commande">Précommander</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <a href="https://wa.me/201282226808" target="_blank" rel="noopener" class="cart-btn">WhatsApp</a>
+      <button class="cart-btn" onclick="toast('Panier — fonctionnalité de démonstration')">
+        Panier <span id="cart-count" class="mono">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Saveurs du pays, style d'ici</div>
+      <h1>Chikwang à la commande.<br>Style <span class="accent">sans détour.</span></h1>
+      <p>Fibis Web réunit trois univers : la cuisine africaine préparée sur précommande, une sélection de vêtements et accessoires, et des parfums et huiles essentielles d'Égypte. Livraison en Égypte et à Kinshasa.</p>
+      <div class="hero-ctas">
+        <a href="#nourriture" class="btn-primary">Précommander un plat</a>
+        <a href="#boutique" class="btn-outline">Voir la boutique</a>
+      </div>
+    </div>
+    <div class="ticket">
+      <div class="ticket-row">
+        <span class="mono">TICKET Nº 0148</span>
+        <span class="mono">PRÉCOMMANDE</span>
+      </div>
+      <div class="ticket-dashes"></div>
+      <div class="ticket-title">Chikwang + Makayabu</div>
+      <div class="ticket-sub">Retrait sous 48h — préparé à la commande</div>
+      <div class="ticket-price">12,50 €</div>
+      <div class="ticket-dashes"></div>
+      <div class="ticket-row"><span>Commande passée avant</span><span class="mono">Jeudi 18h</span></div>
+      <div class="ticket-row"><span>Retrait estimé</span><span class="mono">Samedi</span></div>
+    </div>
+  </div>
+  <div class="band-tabs">
+    <div class="band-tab active">Nourriture africaine</div>
+    <div class="band-tab">Vêtements</div>
+    <div class="band-tab">Accessoires</div>
+    <div class="band-tab">Parfums d'Égypte</div>
+  </div>
+</div>
+
+<div class="wrap">
+<section id="nourriture">
+  <div class="section-head">
+    <div>
+      <h2>Nourriture — sur précommande</h2>
+      <p>Plats préparés à la commande, à retirer selon un créneau confirmé après validation.</p>
+    </div>
+    <span class="num">/ précommande 48h</span>
+  </div>
+  <div class="grid" id="food-grid"></div>
+</section>
+</div>
+
+<div class="fashion-band">
+  <div class="wrap">
+  <section id="boutique">
+    <div class="section-head">
+      <div>
+        <h2>Boutique — vêtements & accessoires</h2>
+        <p>Une sélection de pièces prêtes à expédier, sans délai de précommande.</p>
+      </div>
+      <span class="num" style="color:var(--pale-red)">/ 08 articles</span>
+    </div>
+    <div class="fashion-grid" id="fashion-grid"></div>
+  </section>
+  </div>
+</div>
+
+<div class="wrap">
+<section id="parfums">
+  <div class="section-head">
+    <div>
+      <h2>Parfums & huiles essentielles d'Égypte</h2>
+      <p>Essences distillées en Égypte — flacons prêts à expédier, sans délai de précommande.</p>
+    </div>
+    <span class="num">/ 06 essences</span>
+  </div>
+  <div class="grid" id="perfume-grid"></div>
+</section>
+</div>
+
+<div class="wrap">
+<section id="commande">
+  <div class="section-head">
+    <div>
+      <h2>Comment marche la précommande</h2>
+      <p>Un circuit simple, pensé pour des plats préparés frais.</p>
+    </div>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="n">01</span>
+      <h3>Choisissez votre plat</h3>
+      <p>Sélectionnez un plat dans la section Nourriture et validez votre précommande.</p>
+    </div>
+    <div class="step">
+      <span class="n">02</span>
+      <h3>Confirmation du créneau</h3>
+      <p>Vous recevez un créneau de retrait confirmé, en général sous 48h.</p>
+    </div>
+    <div class="step">
+      <span class="n">03</span>
+      <h3>Retrait ou livraison</h3>
+      <p>Votre plat est prêt au créneau indiqué, préparé le jour même du retrait.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <h4>Fibis Web</h4>
+        <p style="max-width:240px;">Nourriture africaine sur précommande, vêtements, accessoires et parfums d'Égypte.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Nourriture</h4>
+        <a href="#nourriture">Plats de la semaine</a>
+        <a href="#commande">Précommander</a>
+      </div>
+      <div class="foot-col">
+        <h4>Boutique</h4>
+        <a href="#boutique">Vêtements</a>
+        <a href="#parfums">Parfums & huiles</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact & livraison</h4>
+        <a href="https://wa.me/201282226808" target="_blank" rel="noopener">WhatsApp : +20 128 222 6808</a>
+        <a href="mailto:plamedilufiaulusu101@gmail.com">plamedilufiaulusu101@gmail.com</a>
+        <p>Livraison en Égypte et à Kinshasa</p>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Fibis Web — site de démonstration</span>
+      <span class="mono">Fait à la commande</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+const foodItems = [
+  {cat:'Précommande', title:'Chikwang nature', desc:"Pain de manioc fermenté, enveloppé en feuilles, préparé à la commande.", price:'6,50 €', tag:'J-2'},
+  {cat:'Précommande', title:'Chikwang + Makayabu', desc:"Chikwang accompagné de poisson salé mijoté à la tomate.", price:'12,50 €', tag:'J-2'},
+  {cat:'Précommande', title:'Saka-saka poulet', desc:"Feuilles de manioc pilées, mijotées, servies avec poulet fermier.", price:'11,00 €', tag:'J-2'},
+  {cat:'Précommande', title:'Beignets maison', desc:"Beignets moelleux, lot de 6, préparés le jour du retrait.", price:'4,00 €', tag:'J-1'},
+  {cat:'Précommande', title:'Jus de bissap', desc:"Infusion d'hibiscus maison, servie fraîche, sans sucre ajouté.", price:'3,50 €', tag:'J-1'},
+  {cat:'Précommande', title:'Coffret découverte', desc:"Chikwang, saka-saka et beignets — pour découvrir la carte.", price:'19,00 €', tag:'J-2'},
+];
+
+const perfumeItems = [
+  {cat:'Parfum', title:'Musc noir du Caire', desc:"Fragrance boisée et musquée, distillée artisanalement au Caire.", price:'22,00 €'},
+  {cat:'Huile essentielle', title:'Huile de rose de Fayoum', desc:"Extraite des roseraies du Fayoum, pure à 100%.", price:'18,50 €'},
+  {cat:'Parfum', title:'Ambre du Nil', desc:"Notes chaudes d'ambre et de bois de santal, flacon 15ml.", price:'25,00 €'},
+  {cat:'Huile essentielle', title:'Huile de nigelle', desc:"Pressée à froid, connue pour ses vertus traditionnelles.", price:'14,00 €'},
+  {cat:'Parfum', title:'Jasmin d\\'Alexandrie', desc:"Absolue de jasmin, fraîche et florale, flacon 15ml.", price:'23,50 €'},
+  {cat:'Huile essentielle', title:'Huile de karkadé', desc:"Infusion d'hibiscus égyptien en huile de soin.", price:'12,00 €'},
+];
+
+const fashionItems = [
+  {cat:'Vêtements', title:'Chemise imprimé wax', price:'32,00 €'},
+  {cat:'Vêtements', title:'Robe tissu traditionnel', price:'45,00 €'},
+  {cat:'Accessoires', title:'Bijoux perles artisanales', price:'14,00 €'},
+  {cat:'Accessoires', title:'Sac tissé fait main', price:'26,00 €'},
+  {cat:'Vêtements', title:'T-shirt brodé Fibis', price:'19,00 €'},
+  {cat:'Accessoires', title:'Bonnet tricoté', price:'12,00 €'},
+  {cat:'Vêtements', title:'Ensemble deux pièces wax', price:'52,00 €'},
+  {cat:'Accessoires', title:'Ceinture en cuir tressé', price:'18,00 €'},
+];
+
+const foodGrid = document.getElementById('food-grid');
+const fashionGrid = document.getElementById('fashion-grid');
+const perfumeGrid = document.getElementById('perfume-grid');
+let cartCount = 0;
+const cartCountEl = document.getElementById('cart-count');
+
+foodItems.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'food-card';
+  card.innerHTML = `
+    <div class="food-visual">
+      <span class="preorder-tag">COMMANDE ${p.tag}</span>
+      <svg width="86" height="70" viewBox="0 0 86 70" fill="none">
+        <ellipse cx="43" cy="55" rx="34" ry="9" fill="#141010" opacity="0.06"/>
+        <path d="M14 40 Q43 20 72 40 L66 52 Q43 62 20 52 Z" fill="#B65C50" opacity="0.85"/>
+        <rect x="30" y="14" width="26" height="20" rx="4" fill="#141010" opacity="0.8"/>
+      </svg>
+    </div>
+    <div class="food-body">
+      <div class="food-cat">${p.cat}</div>
+      <div class="food-title">${p.title}</div>
+      <p class="food-desc">${p.desc}</p>
+      <div class="food-footer">
+        <span class="price">${p.price}</span>
+        <button class="add-btn">Précommander</button>
+      </div>
+    </div>
+  `;
+  card.querySelector('.add-btn').addEventListener('click', () => {
+    cartCount++;
+    cartCountEl.textContent = cartCount;
+    toast(`${p.title} — précommande ajoutée`);
+  });
+  foodGrid.appendChild(card);
+});
+
+perfumeItems.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'food-card';
+  card.innerHTML = `
+    <div class="food-visual">
+      <svg width="54" height="78" viewBox="0 0 54 78" fill="none">
+        <rect x="20" y="4" width="14" height="10" rx="2" fill="#141010"/>
+        <rect x="16" y="14" width="22" height="8" rx="3" fill="#B65C50" opacity="0.6"/>
+        <path d="M14 22 h26 v8 q0 6 -6 6 h-14 q-6 0 -6 -6 z" fill="#D9948A" opacity="0.35"/>
+        <rect x="10" y="36" width="34" height="38" rx="6" fill="#D9948A" opacity="0.85"/>
+        <rect x="10" y="36" width="34" height="10" fill="#141010" opacity="0.08"/>
+      </svg>
+    </div>
+    <div class="food-body">
+      <div class="food-cat">${p.cat}</div>
+      <div class="food-title">${p.title}</div>
+      <p class="food-desc">${p.desc}</p>
+      <div class="food-footer">
+        <span class="price">${p.price}</span>
+        <button class="add-btn">Ajouter</button>
+      </div>
+    </div>
+  `;
+  card.querySelector('.add-btn').addEventListener('click', () => {
+    cartCount++;
+    cartCountEl.textContent = cartCount;
+    toast(`${p.title} ajouté au panier`);
+  });
+  perfumeGrid.appendChild(card);
+});
+
+fashionItems.forEach(p => {
+  const card = document.createElement('div');
+  card.className = 'fashion-card';
+  card.innerHTML = `
+    <div class="fashion-visual">
+      <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+        <rect x="14" y="10" width="32" height="55" rx="4" fill="#D9948A" opacity="0.9"/>
+        <rect x="20" y="0" width="20" height="14" rx="4" fill="#251E1C"/>
+      </svg>
+    </div>
+    <div class="fashion-body">
+      <div class="fashion-cat">${p.cat}</div>
+      <div class="fashion-title">${p.title}</div>
+      <div class="fashion-footer">
+        <span class="price mono">${p.price}</span>
+        <button class="mini-add" aria-label="Ajouter">+</button>
+      </div>
+    </div>
+  `;
+  card.querySelector('.mini-add').addEventListener('click', () => {
+    cartCount++;
+    cartCountEl.textContent = cartCount;
+    toast(`${p.title} ajouté au panier`);
+  });
+  fashionGrid.appendChild(card);
+});
+
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+document.querySelectorAll('.band-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.band-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
