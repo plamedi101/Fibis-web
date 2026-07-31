@@ -51,7 +51,8 @@
   /* HEADER */
   header{position:sticky;top:0;z-index:60;background:var(--deep);color:var(--sand2);border-bottom:1px solid var(--line-d);}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1200px;margin:0 auto;}
-  .logo{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;letter-spacing:0.01em;}
+  .logo{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;letter-spacing:0.01em;display:flex;align-items:center;}
+  .logo img{height:52px;width:auto;border-radius:6px;display:block;}
   .logo em{color:var(--gold);font-style:italic;}
   .nav-links{display:flex;gap:32px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;}
   .nav-links a{position:relative;padding:4px 0;}
@@ -150,7 +151,7 @@
   .f-cat{font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);font-weight:600;margin-bottom:8px;}
   .f-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;margin-bottom:10px;}
   .f-price-row{margin-bottom:12px;}
-  .f-footer .price{color:var(--sand2);}
+  .f-price-row .price{color:var(--sand2);}
   .f-btn-row{display:flex;gap:8px;align-items:center;}
   .mini-add{width:34px;height:34px;border-radius:50%;border:1px solid var(--sand2);background:transparent;color:var(--sand2);font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s;flex-shrink:0;}
   .mini-add:hover{background:var(--gold);color:var(--deep);border-color:var(--gold);}
@@ -292,6 +293,8 @@
   .modal-close{position:absolute;top:18px;right:18px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--ink);}
   .modal-box h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:6px;}
   .modal-box .sub{font-size:13px;color:#5c6862;margin-bottom:22px;}
+  .pm-label{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#5c6862;display:block;margin-bottom:8px;}
+  .pm-input{width:100%;padding:12px 16px;border:1px solid var(--line-l);border-radius:6px;font-family:inherit;font-size:14px;background:var(--sand);margin-bottom:20px;}
   .method-option{display:flex;align-items:center;gap:14px;border:1px solid var(--line-l);border-radius:6px;padding:16px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;}
   .method-option:hover, .method-option.selected{border-color:var(--gold);}
   .method-icon{width:40px;height:40px;border-radius:50%;background:var(--deep);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:14px;flex-shrink:0;}
@@ -300,14 +303,19 @@
   .continue-btn{width:100%;background:var(--deep);color:var(--gold);border:none;border-radius:100px;padding:14px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;cursor:pointer;margin-top:8px;}
   .pay-instructions{background:var(--sand);border-radius:6px;padding:18px;font-size:13px;color:#3a4542;margin-bottom:18px;line-height:1.7;}
   .pay-instructions .num{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--deep);font-size:15px;}
-  .placeholder-flag{color:#b5522f;font-size:11px;font-style:italic;}
 
-  #invoice-modal .modal-box{max-width:440px;}
-  .inv-header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px dashed var(--line-l);padding-bottom:16px;margin-bottom:16px;}
-  .inv-brand{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;}
-  .inv-brand em{color:var(--gold-deep);font-style:italic;}
-  .inv-meta{text-align:right;font-size:12px;color:#5c6862;}
-  .inv-line{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;}
+  #invoice-modal .modal-box{max-width:460px;}
+  .inv-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed var(--line-l);padding-bottom:16px;margin-bottom:16px;}
+  .inv-logo{height:46px;width:auto;border-radius:5px;display:block;}
+  .inv-meta{text-align:right;font-size:12px;color:#5c6862;line-height:1.5;}
+  .inv-customer{font-size:13px;color:#3a4542;margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed var(--line-l);}
+  .inv-customer strong{display:block;font-family:'Playfair Display',serif;font-size:15px;margin-bottom:2px;color:var(--deep);}
+  .inv-table-head{display:grid;grid-template-columns:2.2fr 0.6fr 1fr 1fr;font-size:10px;text-transform:uppercase;letter-spacing:0.05em;color:#8a8375;padding-bottom:8px;border-bottom:1px solid var(--line-l);margin-bottom:6px;}
+  .inv-table-head span:nth-child(2), .inv-table-head span:nth-child(3), .inv-table-head span:nth-child(4){text-align:right;}
+  .inv-line{display:grid;grid-template-columns:2.2fr 0.6fr 1fr 1fr;font-size:13px;padding:7px 0;border-bottom:1px solid var(--line-l);}
+  .inv-line span:nth-child(2){text-align:right;color:#5c6862;}
+  .inv-line span:nth-child(3){text-align:right;color:#5c6862;}
+  .inv-line span:nth-child(4){text-align:right;font-weight:600;}
   .inv-total{display:flex;justify-content:space-between;font-size:16px;font-weight:700;border-top:1px solid var(--line-l);margin-top:10px;padding-top:12px;}
   .inv-status{margin-top:16px;font-size:12px;background:#FBF0E4;color:var(--gold-deep);padding:10px 14px;border-radius:4px;text-align:center;font-weight:600;}
   .inv-actions{display:flex;gap:10px;margin-top:20px;}
@@ -358,7 +366,7 @@
 
 <header>
   <div class="nav">
-    <div class="logo">Fibis <em>Web</em></div>
+    <div class="logo"><img src="images/fibis-logo-header.jpg" alt="Fibis Web"></div>
     <div class="nav-links">
       <a href="#parfums">Parfums</a>
       <a href="#boutique">Boutique</a>
@@ -388,21 +396,27 @@
 <div class="modal-overlay" id="payment-modal">
   <div class="modal-box">
     <button class="modal-close" data-close="payment-modal">✕</button>
-    <h3>Choisissez votre mode de paiement</h3>
-    <p class="sub">Le paiement se confirme manuellement avec vous, sans passerelle automatique.</p>
+    <h3>Finaliser votre commande</h3>
+    <p class="sub">Renseignez vos coordonnées, puis choisissez votre mode de paiement.</p>
+    <label class="pm-label">Nom complet</label>
+    <input type="text" id="customer-name" class="pm-input" placeholder="Votre nom complet">
     <div id="method-list"></div>
     <button class="continue-btn" id="continue-payment">Continuer</button>
   </div>
 </div>
 
 <div class="modal-overlay" id="invoice-modal">
-  <div class="modal-box">
+  <div class="modal-box inv-box">
     <button class="modal-close" data-close="invoice-modal">✕</button>
     <div class="inv-header">
-      <div class="inv-brand">Fibis <em>Web</em></div>
+      <img src="images/fibis-logo-header.jpg" alt="Fibis Web" class="inv-logo">
       <div class="inv-meta" id="inv-meta"></div>
     </div>
-    <div id="inv-lines"></div>
+    <div class="inv-customer" id="inv-customer"></div>
+    <div class="inv-table">
+      <div class="inv-table-head"><span>Article</span><span>Qté</span><span>Prix unit.</span><span>Sous-total</span></div>
+      <div id="inv-lines"></div>
+    </div>
     <div class="inv-total"><span>Total</span><span class="mono" id="inv-total"></span></div>
     <div id="inv-instructions"></div>
     <div class="inv-status">En attente de confirmation du paiement</div>
@@ -607,7 +621,7 @@
       </div>
       <textarea name="message" class="nl-message" rows="3" placeholder="Une question, une envie particulière ? Écrivez-nous ici (facultatif)"></textarea>
       <label class="nl-check">
-        <input type="checkbox" name="consentement" value="oui" required>
+        <input type="checkbox" name="consentement" value="oui">
         <span>J'accepte de recevoir des offres et actualités de Fibis Web et de ses partenaires sélectionnés par email. Je peux me désinscrire à tout moment.</span>
       </label>
       <button type="submit" class="btn-gold">Envoyer</button>
@@ -831,6 +845,12 @@ galleryData.forEach(g => {
 
 // testimonials
 const testiGrid = document.getElementById('testi-grid');
+function escapeHtml(str){
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
 function renderTestimonials(){
   testiGrid.innerHTML = '';
   reviews.slice(0,6).forEach(t => {
@@ -838,10 +858,10 @@ function renderTestimonials(){
     card.className = 'testi-card reveal in';
     card.innerHTML = `
       <div class="stars">${'★'.repeat(t.stars)}${'☆'.repeat(5-t.stars)}</div>
-      <p class="testi-quote">"${t.quote}"</p>
+      <p class="testi-quote">"${escapeHtml(t.quote)}"</p>
       <div class="testi-author">
-        <div class="testi-avatar">${t.name.charAt(0)}</div>
-        <div><div class="testi-name">${t.name}</div><div class="testi-loc">${t.loc}</div></div>
+        <div class="testi-avatar">${escapeHtml(t.name.charAt(0))}</div>
+        <div><div class="testi-name">${escapeHtml(t.name)}</div><div class="testi-loc">${escapeHtml(t.loc)}</div></div>
       </div>`;
     testiGrid.appendChild(card);
   });
@@ -865,8 +885,8 @@ starEls.forEach(s => {
 });
 
 document.getElementById('review-submit').addEventListener('click', () => {
-  const name = document.getElementById('review-name').value.trim();
-  const text = document.getElementById('review-text').value.trim();
+  const name = document.getElementById('review-name').value.trim().slice(0, 60);
+  const text = document.getElementById('review-text').value.trim().slice(0, 400);
   if(!name || !text){
     toast('Ajoutez votre prénom et votre avis');
     return;
@@ -981,23 +1001,30 @@ function buyNow(p){
 let lastInvoice = null;
 document.getElementById('continue-payment').addEventListener('click', () => {
   const ids = Object.keys(cart);
+  if(ids.length === 0){ toast('Votre panier est vide'); return; }
+  const customerName = document.getElementById('customer-name').value.trim().slice(0,80);
+  if(!customerName){
+    toast('Indiquez votre nom complet pour continuer');
+    return;
+  }
   let total = 0;
   const lines = ids.map(id => {
     const p = allProducts[id]; const qty = cart[id]; total += qty*p.price;
-    return {title:p.title, qty, subtotal: qty*p.price};
+    return {title:p.title, qty, unit:p.price, subtotal: qty*p.price};
   });
   const method = methods.find(m => m.id === selectedMethod);
   const invNumber = 'FW-' + Date.now().toString().slice(-6);
-  lastInvoice = {invNumber, date: new Date().toLocaleDateString('fr-FR'), lines, total, method};
+  lastInvoice = {invNumber, date: new Date().toLocaleDateString('fr-FR'), customerName, lines, total, method};
   renderInvoice(lastInvoice);
   closeModal('payment-modal');
   openModal('invoice-modal');
 });
 
 function renderInvoice(inv){
-  document.getElementById('inv-meta').innerHTML = `Facture ${inv.invNumber}<br>${inv.date}`;
+  document.getElementById('inv-meta').innerHTML = `Facture<br><strong>${inv.invNumber}</strong><br>${inv.date}`;
+  document.getElementById('inv-customer').innerHTML = `<strong>${escapeHtml(inv.customerName)}</strong>Client Fibis Web`;
   const linesEl = document.getElementById('inv-lines');
-  linesEl.innerHTML = inv.lines.map(l => `<div class="inv-line"><span>${l.qty}x ${l.title}</span><span class="mono">${l.subtotal.toFixed(2).replace('.',',')} €</span></div>`).join('');
+  linesEl.innerHTML = inv.lines.map(l => `<div class="inv-line"><span>${escapeHtml(l.title)}</span><span class="mono">${l.qty}</span><span class="mono">${l.unit.toFixed(2).replace('.',',')} €</span><span class="mono">${l.subtotal.toFixed(2).replace('.',',')} €</span></div>`).join('');
   document.getElementById('inv-total').textContent = inv.total.toFixed(2).replace('.',',') + ' €';
   const instrEl = document.getElementById('inv-instructions');
   if(inv.method.id === 'whatsapp'){
@@ -1010,7 +1037,7 @@ function renderInvoice(inv){
 document.getElementById('inv-send-btn').addEventListener('click', () => {
   if(!lastInvoice) return;
   const inv = lastInvoice;
-  let lines = [`Bonjour Fibis Web, voici ma commande ${inv.invNumber} :`];
+  let lines = [`Bonjour Fibis Web, voici ma commande ${inv.invNumber} :`, `Nom : ${inv.customerName}`];
   inv.lines.forEach(l => lines.push(`- ${l.qty}x ${l.title} (${l.subtotal.toFixed(2).replace('.',',')} €)`));
   lines.push(`Total : ${inv.total.toFixed(2).replace('.',',')} €`);
   lines.push(`Mode de paiement : ${inv.method.name}`);
