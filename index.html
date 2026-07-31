@@ -245,6 +245,12 @@
     background:var(--deep2);color:var(--sand2);font-family:inherit;font-size:14px;
   }
   #newsletter-form input::placeholder{color:#a9c4bd;}
+  .nl-message{
+    width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--line-d);
+    background:var(--deep2);color:var(--sand2);font-family:inherit;font-size:14px;
+    resize:vertical;margin-bottom:16px;min-height:80px;
+  }
+  .nl-message::placeholder{color:#a9c4bd;}
   .nl-check{display:flex;align-items:flex-start;gap:10px;text-align:left;font-size:12px;color:#cfe3de;margin-bottom:22px;cursor:pointer;}
   .nl-check input{margin-top:3px;flex-shrink:0;}
 
@@ -593,17 +599,18 @@
   <div class="newsletter-box reveal">
     <div class="eyebrow" style="color:var(--gold)">Restez informé</div>
     <h2>Recevez nos offres et actualités</h2>
-    <p class="nl-sub">Inscrivez-vous pour être averti des nouveautés et des offres — les vôtres, et celles de partenaires sélectionnés si vous le souhaitez.</p>
+    <p class="nl-sub">Inscrivez-vous pour être averti des nouveautés et des offres, et écrivez-nous directement si vous avez une question ou une envie particulière.</p>
     <form id="newsletter-form" action="https://formspree.io/f/xzdnwwek" method="POST">
       <div class="nl-row">
         <input type="text" name="prenom" placeholder="Votre prénom" required>
         <input type="email" name="email" placeholder="Votre email" required>
       </div>
+      <textarea name="message" class="nl-message" rows="3" placeholder="Une question, une envie particulière ? Écrivez-nous ici (facultatif)"></textarea>
       <label class="nl-check">
         <input type="checkbox" name="consentement" value="oui" required>
         <span>J'accepte de recevoir des offres et actualités de Fibis Web et de ses partenaires sélectionnés par email. Je peux me désinscrire à tout moment.</span>
       </label>
-      <button type="submit" class="btn-gold">S'inscrire</button>
+      <button type="submit" class="btn-gold">Envoyer</button>
     </form>
   </div>
 </section>
