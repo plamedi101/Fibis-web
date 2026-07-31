@@ -2,227 +2,348 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="google-site-verification" content="i-_YeK6KOkEyuGcZOJYREUOjFkmEv9lHuBcAndBv0ME" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fibis Web — Nourriture africaine, mode & parfums d'Égypte | Livraison Égypte & Kinshasa</title>
-<meta name="description" content="Fibis Web : chikwang et nourriture africaine sur précommande, vêtements et accessoires, parfums et huiles essentielles d'Égypte. Livraison en Égypte et à Kinshasa.">
-<meta name="keywords" content="chikwang, nourriture africaine, précommande, vêtements wax, parfums Égypte, huiles essentielles, Kinshasa, Égypte">
-<meta property="og:title" content="Fibis Web — Saveurs & Style">
-<meta property="og:description" content="Nourriture africaine sur précommande, vêtements, accessoires, parfums et huiles essentielles d'Égypte. Livraison en Égypte et à Kinshasa.">
+<title>Fibis Web — Parfums d'Égypte, Mode & Accessoires | Livraison Égypte & Kinshasa</title>
+<meta name="description" content="Fibis Web : parfums et huiles essentielles d'Égypte, vêtements et accessoires. Paiement M-Pesa et Orange Money. Livraison en Égypte et à Kinshasa.">
+<meta name="keywords" content="parfums Égypte, huiles essentielles, vêtements wax, accessoires, M-Pesa, Orange Money, Kinshasa, Égypte">
+<meta property="og:title" content="Fibis Web — Votre oasis de parfums et de style">
+<meta property="og:description" content="Parfums et huiles essentielles d'Égypte, vêtements et accessoires. Livraison en Égypte et à Kinshasa.">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, follow">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23141010'/%3E%3Ccircle cx='50' cy='50' r='28' fill='%23D9948A'/%3E%3C/svg%3E">
+<meta name="google-site-verification" content="i-_YeK6KOkEyuGcZOJYREUOjFkmEv9lHuBcAndBv0ME" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B3D37'/%3E%3Ccircle cx='50' cy='50' r='28' fill='%23C6A15B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --black:#141010;
-    --black2:#1E1817;
-    --black3:#251E1C;
-    --pale-red:#D9948A;
-    --pale-red-deep:#B65C50;
-    --cream:#F4EAE4;
-    --offwhite:#FBF6F2;
-    --line: rgba(244,234,228,0.14);
-    --line-dark: rgba(20,16,16,0.12);
+    --deep:#0B3D37;
+    --deep2:#123F39;
+    --deep3:#1B4B44;
+    --teal:#1F7A6C;
+    --turquoise:#4FBBA6;
+    --gold:#C6A15B;
+    --gold-deep:#8F7434;
+    --sand:#F7F1E3;
+    --sand2:#FFFDF7;
+    --ink:#132523;
+    --line-l: rgba(19,37,35,0.12);
+    --line-d: rgba(247,241,227,0.16);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
-    background:var(--offwhite);
-    color:var(--black);
-    font-family:'Inter',sans-serif;
-    line-height:1.55;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:'Jost',sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
   }
-  h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;letter-spacing:-0.02em;}
+  h1,h2,h3{font-family:'Playfair Display',serif;letter-spacing:-0.01em;}
   .mono{font-family:'JetBrains Mono',monospace;}
   a{color:inherit;text-decoration:none;}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
   img,svg{display:block;}
+  button{font-family:inherit;}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
 
   /* HEADER */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:var(--black);color:var(--cream);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:20px 32px;max-width:1180px;margin:0 auto;
-  }
-  .logo{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:800;letter-spacing:-0.01em;text-transform:uppercase;}
-  .logo span{color:var(--pale-red);}
-  .nav-links{display:flex;gap:34px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;}
+  header{position:sticky;top:0;z-index:60;background:var(--deep);color:var(--sand2);border-bottom:1px solid var(--line-d);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;max-width:1200px;margin:0 auto;}
+  .logo{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;letter-spacing:0.01em;}
+  .logo em{color:var(--gold);font-style:italic;}
+  .nav-links{display:flex;gap:32px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:0.08em;}
   .nav-links a{position:relative;padding:4px 0;}
-  .nav-links a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--pale-red);transition:width .25s ease;}
+  .nav-links a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .25s ease;}
   .nav-links a:hover:after{width:100%;}
-  .cart-btn{
-    display:flex;align-items:center;gap:8px;
-    border:1px solid var(--cream);border-radius:100px;
-    padding:9px 18px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;
-    background:transparent;color:var(--cream);cursor:pointer;
-    transition:background .2s, color .2s;
+  .header-actions{display:flex;gap:10px;align-items:center;}
+  .icon-btn{
+    display:flex;align-items:center;gap:7px;border:1px solid var(--line-d);border-radius:100px;
+    padding:9px 16px;font-size:12px;font-weight:500;background:transparent;color:var(--sand2);
+    cursor:pointer;transition:border-color .2s, color .2s;
   }
-  .cart-btn:hover{background:var(--pale-red);border-color:var(--pale-red);color:var(--black);}
+  .icon-btn:hover{border-color:var(--gold);color:var(--gold);}
+  .icon-btn svg{width:15px;height:15px;}
+  .cart-btn{
+    display:flex;align-items:center;gap:8px;background:var(--gold);color:var(--deep);
+    border:none;border-radius:100px;padding:10px 20px;font-size:12px;font-weight:700;
+    text-transform:uppercase;letter-spacing:0.04em;cursor:pointer;transition:background .2s;
+  }
+  .cart-btn:hover{background:var(--sand2);}
 
   /* HERO */
-  .hero{
-    background:var(--black);color:var(--cream);
-    padding:80px 32px 0;
-  }
-  .hero-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:50px;align-items:end;padding-bottom:60px;}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;font-size:11px;
-    text-transform:uppercase;letter-spacing:0.14em;color:var(--pale-red);font-weight:600;margin-bottom:22px;
-  }
-  .eyebrow:before{content:"";width:20px;height:1px;background:var(--pale-red);}
-  .hero h1{font-size:clamp(40px,5.6vw,74px);line-height:0.97;margin-bottom:24px;}
-  .hero h1 .accent{color:var(--pale-red);}
-  .hero p{font-size:16px;max-width:420px;color:#cfc2bc;margin-bottom:30px;}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn-primary{
-    background:var(--pale-red);color:var(--black);
-    padding:15px 28px;border-radius:100px;font-size:13px;font-weight:700;
-    text-transform:uppercase;letter-spacing:0.03em;
-    display:inline-block;transition:transform .2s ease, background .2s;
-  }
-  .btn-primary:hover{background:var(--offwhite);transform:translateY(-2px);}
-  .btn-outline{
-    border:1px solid var(--cream);color:var(--cream);
-    padding:15px 28px;border-radius:100px;font-size:13px;font-weight:700;
-    text-transform:uppercase;letter-spacing:0.03em;
-  }
-  .btn-outline:hover{border-color:var(--pale-red);color:var(--pale-red);}
+  .hero{background:var(--deep);color:var(--sand2);padding:90px 32px 0;position:relative;overflow:hidden;}
+  .palm{position:absolute;opacity:0.14;pointer-events:none;}
+  .palm.p1{top:-40px;right:-30px;width:340px;}
+  .palm.p2{bottom:20px;left:-60px;width:260px;transform:scaleX(-1);}
+  .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.15fr 0.85fr;gap:56px;align-items:center;padding-bottom:70px;position:relative;z-index:2;}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--gold);font-weight:600;margin-bottom:24px;}
+  .eyebrow:before{content:"";width:24px;height:1px;background:var(--gold);}
+  .hero h1{font-size:clamp(38px,5.2vw,66px);line-height:1.06;margin-bottom:24px;font-weight:600;}
+  .hero h1 em{color:var(--turquoise);font-style:italic;}
+  .hero p{font-size:16px;max-width:440px;color:#cfe3de;margin-bottom:32px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn-gold{background:var(--gold);color:var(--deep);padding:16px 30px;border-radius:100px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;display:inline-block;transition:transform .2s ease, background .2s;border:none;cursor:pointer;}
+  .btn-gold:hover{background:var(--sand2);transform:translateY(-2px);}
+  .btn-line{border:1px solid var(--sand2);color:var(--sand2);padding:16px 30px;border-radius:100px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;background:transparent;cursor:pointer;}
+  .btn-line:hover{border-color:var(--turquoise);color:var(--turquoise);}
+  .trust-row{display:flex;gap:26px;flex-wrap:wrap;}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#a9c4bd;text-transform:uppercase;letter-spacing:0.03em;}
+  .trust-item svg{width:15px;height:15px;flex-shrink:0;color:var(--turquoise);}
 
-  /* ticket signature element */
-  .ticket{
-    background:var(--black2);border:1px solid var(--line);border-radius:4px;
-    padding:26px;position:relative;
+  .seal{
+    width:220px;height:220px;border-radius:50%;border:1.5px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;margin:0 auto;position:relative;
   }
-  .ticket:before,.ticket:after{
-    content:"";position:absolute;width:22px;height:22px;background:var(--black);
-    border-radius:50%;top:50%;transform:translateY(-50%);
-  }
-  .ticket:before{left:-11px;}
-  .ticket:after{right:-11px;}
-  .ticket-dashes{border-top:1.5px dashed var(--line);margin:16px 0;}
-  .ticket-row{display:flex;justify-content:space-between;font-size:12px;color:#cfc2bc;margin-bottom:6px;}
-  .ticket-title{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:700;margin-bottom:4px;}
-  .ticket-sub{font-size:12px;color:#a89b95;margin-bottom:14px;}
-  .ticket-price{font-family:'JetBrains Mono',monospace;font-size:22px;color:var(--pale-red);}
+  .seal-inner{width:180px;height:180px;border-radius:50%;border:1px dashed var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;}
+  .seal-inner .top{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+  .seal-inner .mid{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--sand2);}
+  .seal-inner .bot{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
 
-  /* section band selectors */
-  .band-tabs{
-    display:flex;border-top:1px solid var(--line);
-  }
-  .band-tab{
-    flex:1;padding:16px 32px;text-align:center;font-size:12px;font-weight:600;
-    text-transform:uppercase;letter-spacing:0.08em;color:#a89b95;
-    border-right:1px solid var(--line);
-  }
+  .wave{display:block;width:100%;line-height:0;}
+  .wave svg{width:100%;height:80px;}
+
+  .band-tabs{display:flex;border-top:1px solid var(--line-d);flex-wrap:wrap;position:relative;z-index:2;}
+  .band-tab{flex:1;padding:16px 20px;text-align:center;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#a9c4bd;border-right:1px solid var(--line-d);cursor:pointer;transition:color .2s;min-width:140px;}
+  .band-tab:hover{color:var(--sand2);}
   .band-tab:last-child{border-right:none;}
-  .band-tab.active{color:var(--pale-red);}
+  .band-tab.active{color:var(--gold);}
 
-  /* SECTIONS */
-  section{padding:80px 0;}
-  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:16px;}
-  .section-head h2{font-size:clamp(28px,3.4vw,38px);}
-  .section-head p{font-size:14px;color:#6b6058;max-width:380px;}
-  .section-head .num{font-family:'JetBrains Mono',monospace;color:var(--pale-red-deep);font-size:13px;}
+  section{padding:88px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px);}
+  .section-head p{font-size:14px;color:#5c6862;max-width:380px;}
+  .section-head .num{font-family:'JetBrains Mono',monospace;color:var(--gold-deep);font-size:13px;}
 
-  /* PREORDER GRID */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .food-card{
-    background:var(--offwhite);border:1px solid var(--line-dark);border-radius:4px;
-    overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .food-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,16,16,0.1);}
-  .food-visual{
-    aspect-ratio:4/3;background:var(--cream);display:flex;align-items:center;justify-content:center;
-    border-bottom:1px solid var(--line-dark);position:relative;
-  }
-  .preorder-tag{
-    position:absolute;top:12px;left:12px;font-family:'JetBrains Mono',monospace;
-    font-size:10px;background:var(--black);color:var(--pale-red);
-    padding:5px 10px;border-radius:100px;letter-spacing:0.03em;
-  }
-  .food-body{padding:20px;}
-  .food-cat{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--pale-red-deep);font-weight:700;margin-bottom:6px;}
-  .food-title{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:700;margin-bottom:6px;}
-  .food-desc{font-size:13px;color:#6b6058;margin-bottom:16px;}
-  .food-footer{display:flex;align-items:center;justify-content:space-between;}
-  .price{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:600;}
-  .add-btn{
-    padding:10px 18px;border-radius:100px;border:1px solid var(--black);
-    background:transparent;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;
-    cursor:pointer;transition:background .2s, color .2s;
-  }
-  .add-btn:hover{background:var(--black);color:var(--pale-red);}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
 
-  /* FASHION SECTION (dark band) */
-  .fashion-band{background:var(--black);color:var(--cream);}
-  .fashion-band .section-head p{color:#a89b95;}
-  .fashion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-  .fashion-card{
-    background:var(--black2);border:1px solid var(--line);border-radius:4px;overflow:hidden;
-    transition:transform .25s ease, border-color .25s ease;
-  }
-  .fashion-card:hover{transform:translateY(-4px);border-color:var(--pale-red);}
-  .fashion-visual{
-    aspect-ratio:3/4;background:var(--black3);display:flex;align-items:center;justify-content:center;
-    border-bottom:1px solid var(--line);
-  }
-  .fashion-body{padding:16px;}
-  .fashion-cat{font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--pale-red);font-weight:600;margin-bottom:6px;}
-  .fashion-title{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:600;margin-bottom:10px;}
-  .fashion-footer{display:flex;justify-content:space-between;align-items:center;}
-  .fashion-footer .price{color:var(--cream);}
-  .mini-add{
-    width:32px;height:32px;border-radius:50%;border:1px solid var(--cream);
-    background:transparent;color:var(--cream);font-size:16px;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    transition:background .2s,color .2s;
-  }
-  .mini-add:hover{background:var(--pale-red);color:var(--black);border-color:var(--pale-red);}
+  .p-card{background:var(--sand2);border:1px solid var(--line-l);border-radius:6px;overflow:hidden;transition:transform .3s ease, box-shadow .3s ease;}
+  .p-card:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(11,61,55,0.12);}
+  .p-visual{aspect-ratio:4/3;background:linear-gradient(180deg,#EFE7D4,#F7F1E3);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line-l);position:relative;overflow:hidden;}
+  .p-visual svg, .p-visual img{transition:transform .45s cubic-bezier(.2,.8,.2,1);}
+  .p-card:hover .p-visual svg{transform:scale(1.1) rotate(-2deg);}
+  .p-card:hover .p-visual img{transform:scale(1.08);}
+  .p-body{padding:22px;}
+  .p-cat{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold-deep);font-weight:600;margin-bottom:8px;}
+  .p-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;margin-bottom:8px;}
+  .p-desc{font-size:13px;color:#5c6862;margin-bottom:16px;}
+  .p-price-row{margin-bottom:14px;}
+  .p-btn-row{display:flex;gap:8px;}
+  .price{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:600;color:var(--deep);}
+  .add-btn{flex:1;padding:11px 14px;border-radius:100px;border:1px solid var(--deep);background:transparent;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.02em;cursor:pointer;transition:background .2s,color .2s;}
+  .add-btn:hover{background:var(--deep);color:var(--gold);}
+  .add-btn.added{background:var(--turquoise);border-color:transparent;color:var(--deep);}
+  .buy-btn{flex:1;padding:11px 14px;border-radius:100px;border:none;background:var(--gold);color:var(--deep);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.02em;cursor:pointer;transition:background .2s, transform .2s;}
+  .buy-btn:hover{background:var(--gold-deep);color:#fff;transform:translateY(-1px);}
+  .buy-btn:active{transform:scale(0.96);}
 
-  /* HOW IT WORKS (preorder process) */
+  .boutique-band{background:var(--deep);color:var(--sand2);position:relative;}
+  .boutique-band .section-head p{color:#a9c4bd;}
+  .f-card{background:var(--deep2);border:1px solid var(--line-d);border-radius:6px;overflow:hidden;transition:transform .3s ease, border-color .3s ease;}
+  .f-card:hover{transform:translateY(-5px);border-color:var(--gold);}
+  .f-visual{aspect-ratio:3/4;background:var(--deep3);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line-d);overflow:hidden;}
+  .f-visual svg{transition:transform .45s cubic-bezier(.2,.8,.2,1);}
+  .f-card:hover .f-visual svg{transform:scale(1.12) rotate(2deg);}
+  .f-body{padding:18px;}
+  .f-cat{font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);font-weight:600;margin-bottom:8px;}
+  .f-title{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;margin-bottom:10px;}
+  .f-price-row{margin-bottom:12px;}
+  .f-footer .price{color:var(--sand2);}
+  .f-btn-row{display:flex;gap:8px;align-items:center;}
+  .mini-add{width:34px;height:34px;border-radius:50%;border:1px solid var(--sand2);background:transparent;color:var(--sand2);font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s;flex-shrink:0;}
+  .mini-add:hover{background:var(--gold);color:var(--deep);border-color:var(--gold);}
+  .f-buy-btn{flex:1;padding:9px 12px;border-radius:100px;border:none;background:var(--gold);color:var(--deep);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.02em;cursor:pointer;transition:background .2s, transform .2s;}
+  .f-buy-btn:hover{background:var(--sand2);transform:translateY(-1px);}
+  .f-buy-btn:active{transform:scale(0.96);}
+
+  @keyframes cartPulse{0%{transform:scale(1);}35%{transform:scale(1.18);}100%{transform:scale(1);}}
+  .cart-btn.pulse{animation:cartPulse .45s ease;}
+  @keyframes sway{0%,100%{transform:rotate(0deg);}50%{transform:rotate(3deg);}}
+  .palm{animation:sway 7s ease-in-out infinite;transform-origin:bottom center;}
+  @keyframes sealGlow{0%,100%{box-shadow:0 0 0 rgba(198,161,91,0);}50%{box-shadow:0 0 26px rgba(198,161,91,0.35);}}
+  .seal{animation:sealGlow 4s ease-in-out infinite;}
+
+  /* GALLERY - coup de coeur */
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,220px);gap:18px;}
+  .g-item{border-radius:6px;overflow:hidden;position:relative;background:var(--sand2);border:1px solid var(--line-l);transition:box-shadow .3s ease;}
+  .g-item:hover{box-shadow:0 16px 30px rgba(11,61,55,0.18);}
+  .g-item svg{transition:transform .5s ease;}
+  .g-item:hover svg{transform:scale(1.08);}
+  .g-item.tall{grid-row:span 2;}
+  .g-item.wide{grid-column:span 2;}
+  .g-cap{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(180deg,transparent,rgba(11,61,55,0.75));color:#fff;font-family:'Playfair Display',serif;font-size:15px;font-style:italic;}
+  .gallery-note{margin-top:20px;font-size:12px;color:#8a8375;text-align:center;}
+
+  .signature-banner{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:8px;overflow:hidden;background:var(--deep);box-shadow:0 20px 50px rgba(11,61,55,0.18);}
+  .signature-visual{position:relative;overflow:hidden;background:#0a0a0a;}
+  .signature-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;min-height:340px;}
+  .signature-banner:hover .signature-visual img{transform:scale(1.04);}
+  .signature-copy{padding:56px;color:var(--sand2);display:flex;flex-direction:column;justify-content:center;}
+  .signature-copy h2{color:var(--sand2);font-size:clamp(28px,3.4vw,40px);margin-bottom:16px;}
+  .signature-copy p{color:#cfe3de;font-size:14px;max-width:420px;margin-bottom:26px;}
+  .signature-specs{display:flex;gap:32px;margin-bottom:30px;}
+  .signature-specs div span{display:block;font-family:'Playfair Display',serif;font-size:24px;color:var(--gold);}
+  .signature-specs div small{font-size:11px;color:#a9c4bd;text-transform:uppercase;letter-spacing:0.06em;}
+  @media(max-width:820px){.signature-banner{grid-template-columns:1fr;}.signature-copy{padding:36px 28px;}}
+
+  /* STORY */
+  .story{background:var(--deep);color:var(--sand2);border-radius:6px;padding:64px;display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;}
+  .story h2{color:var(--sand2);font-size:clamp(26px,3vw,36px);margin-bottom:20px;}
+  .story p{color:#cfe3de;font-size:15px;max-width:460px;}
+  .story-stats{display:flex;gap:40px;margin-top:32px;flex-wrap:wrap;}
+  .story-stats div span{display:block;font-family:'Playfair Display',serif;font-size:32px;color:var(--gold);}
+  .story-stats div small{font-size:12px;color:#a9c4bd;text-transform:uppercase;letter-spacing:0.06em;}
+
+  /* REVIEWS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:36px;}
+  .testi-card{background:var(--sand2);border:1px solid var(--line-l);border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:14px;}
+  .stars{color:var(--gold-deep);font-size:14px;letter-spacing:2px;}
+  .testi-quote{font-size:14px;color:#3a4542;font-style:italic;line-height:1.6;}
+  .testi-author{display:flex;align-items:center;gap:10px;margin-top:auto;}
+  .testi-avatar{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;color:var(--deep);font-size:14px;flex-shrink:0;}
+  .testi-name{font-size:13px;font-weight:600;}
+  .testi-loc{font-size:11px;color:#8a8375;}
+
+  .review-form{background:var(--sand2);border:1px solid var(--line-l);border-radius:6px;padding:28px;max-width:560px;}
+  .review-form h3{font-size:18px;margin-bottom:16px;}
+  .review-form label{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#5c6862;display:block;margin-bottom:6px;margin-top:14px;}
+  .review-form input, .review-form textarea{width:100%;padding:11px 14px;border:1px solid var(--line-l);border-radius:4px;font-family:inherit;font-size:14px;background:var(--sand);}
+  .star-select{display:flex;gap:6px;margin-top:4px;}
+  .star-select span{font-size:22px;cursor:pointer;color:#d8d0bd;}
+  .star-select span.active{color:var(--gold-deep);}
+  .review-submit{margin-top:18px;background:var(--deep);color:var(--gold);border:none;border-radius:100px;padding:13px 26px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;cursor:pointer;}
+
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .step{border-top:2px solid var(--black);padding-top:18px;}
-  .step .n{font-family:'JetBrains Mono',monospace;color:var(--pale-red-deep);font-size:13px;margin-bottom:10px;display:block;}
+  .step{border-top:2px solid var(--deep);padding-top:18px;}
+  .step .n{font-family:'JetBrains Mono',monospace;color:var(--gold-deep);font-size:13px;margin-bottom:10px;display:block;}
   .step h3{font-size:18px;margin-bottom:8px;}
-  .step p{font-size:13px;color:#6b6058;}
+  .step p{font-size:13px;color:#5c6862;}
 
-  /* FOOTER */
-  footer{background:var(--black);color:var(--cream);padding-top:60px;padding-bottom:32px;}
+  .pay-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .pay-card{background:var(--sand2);border:1px solid var(--line-l);border-radius:6px;padding:24px;text-align:center;}
+  .pay-badge{width:52px;height:52px;border-radius:50%;background:var(--deep);color:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;}
+  .pay-card h3{font-size:16px;margin-bottom:8px;}
+  .pay-card p{font-size:13px;color:#5c6862;}
+
+  .faq-list{max-width:780px;}
+  .faq-item{border-bottom:1px solid var(--line-l);}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;}
+  .faq-q .plus{font-family:'JetBrains Mono',monospace;font-size:18px;color:var(--gold-deep);transition:transform .25s ease;flex-shrink:0;margin-left:16px;}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:14px;color:#5c6862;}
+  .faq-a-inner{padding-bottom:22px;max-width:660px;}
+  .faq-item.open .faq-a{max-height:220px;}
+
+  .newsletter-box{background:var(--deep);color:var(--sand2);border-radius:8px;padding:56px;text-align:center;max-width:720px;margin:0 auto;}
+  .newsletter-box h2{color:var(--sand2);margin-bottom:14px;}
+  .nl-sub{color:#cfe3de;font-size:14px;max-width:520px;margin:0 auto 28px;}
+  #newsletter-form .nl-row{display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap;}
+  #newsletter-form input[type="text"], #newsletter-form input[type="email"]{
+    flex:1;min-width:180px;padding:13px 16px;border-radius:100px;border:1px solid var(--line-d);
+    background:var(--deep2);color:var(--sand2);font-family:inherit;font-size:14px;
+  }
+  #newsletter-form input::placeholder{color:#a9c4bd;}
+  .nl-check{display:flex;align-items:flex-start;gap:10px;text-align:left;font-size:12px;color:#cfe3de;margin-bottom:22px;cursor:pointer;}
+  .nl-check input{margin-top:3px;flex-shrink:0;}
+
+  footer{background:var(--deep);color:var(--sand2);padding-top:64px;padding-bottom:32px;}
   .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px;}
-  .foot-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;color:var(--pale-red);}
-  .foot-col a,.foot-col p{display:block;font-size:14px;color:#cfc2bc;margin-bottom:10px;}
-  .foot-bottom{
-    display:flex;justify-content:space-between;align-items:center;
-    padding-top:24px;border-top:1px solid var(--line);
-    font-size:12px;color:#8a8375;flex-wrap:wrap;gap:12px;
-  }
+  .foot-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;color:var(--gold);}
+  .foot-col a,.foot-col p{display:block;font-size:14px;color:#cfe3de;margin-bottom:10px;}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid var(--line-d);font-size:12px;color:#8fa8a1;flex-wrap:wrap;gap:12px;}
 
-  /* TOAST */
-  #toast{
-    position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);
-    background:var(--black);color:var(--pale-red);
-    padding:14px 24px;border-radius:100px;font-size:13px;
-    opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;
-    font-family:'JetBrains Mono',monospace;border:1px solid var(--pale-red);
-    z-index:100;
-  }
+  #toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--deep);color:var(--gold);padding:14px 24px;border-radius:100px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;font-family:'JetBrains Mono',monospace;border:1px solid var(--gold);z-index:100;}
   #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
-  @media(max-width:920px){
+  /* CART DRAWER */
+  #cart-overlay{position:fixed;inset:0;background:rgba(11,25,23,0.55);z-index:150;opacity:0;pointer-events:none;transition:opacity .3s ease;}
+  #cart-overlay.open{opacity:1;pointer-events:auto;}
+  #cart-drawer{position:fixed;top:0;right:0;height:100%;width:400px;max-width:90vw;background:var(--sand2);color:var(--ink);z-index:151;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column;box-shadow:-10px 0 34px rgba(0,0,0,0.22);}
+  #cart-drawer.open{transform:translateX(0);}
+  .cart-head{display:flex;justify-content:space-between;align-items:center;padding:24px;border-bottom:1px solid var(--line-l);}
+  .cart-head h3{font-size:18px;}
+  .cart-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink);}
+  .cart-items{flex:1;overflow-y:auto;padding:16px 24px;}
+  .cart-empty{color:#8a8375;font-size:14px;text-align:center;padding:40px 0;}
+  .cart-line{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-l);align-items:center;}
+  .cart-line-info{flex:1;}
+  .cart-line-title{font-size:14px;font-weight:600;margin-bottom:2px;}
+  .cart-line-price{font-size:12px;color:#8a8375;}
+  .qty-ctrl{display:flex;align-items:center;gap:8px;}
+  .qty-btn{width:24px;height:24px;border-radius:50%;border:1px solid var(--ink);background:none;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .qty-val{font-family:'JetBrains Mono',monospace;font-size:13px;min-width:16px;text-align:center;}
+  .cart-foot{padding:20px 24px;border-top:1px solid var(--line-l);}
+  .cart-total-row{display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin-bottom:16px;}
+  .checkout-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--deep);color:var(--gold);border:none;border-radius:100px;padding:15px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;cursor:pointer;transition:background .2s;}
+  .checkout-btn:hover{background:var(--deep2);}
+
+  /* MODALS (payment + invoice) */
+  .modal-overlay{position:fixed;inset:0;background:rgba(11,25,23,0.6);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;}
+  .modal-overlay.open{display:flex;}
+  .modal-box{background:var(--sand2);border-radius:8px;max-width:480px;width:100%;max-height:86vh;overflow-y:auto;padding:32px;position:relative;}
+  .modal-close{position:absolute;top:18px;right:18px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--ink);}
+  .modal-box h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:6px;}
+  .modal-box .sub{font-size:13px;color:#5c6862;margin-bottom:22px;}
+  .method-option{display:flex;align-items:center;gap:14px;border:1px solid var(--line-l);border-radius:6px;padding:16px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;}
+  .method-option:hover, .method-option.selected{border-color:var(--gold);}
+  .method-icon{width:40px;height:40px;border-radius:50%;background:var(--deep);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:14px;flex-shrink:0;}
+  .method-name{font-weight:600;font-size:14px;}
+  .method-sub{font-size:12px;color:#8a8375;}
+  .continue-btn{width:100%;background:var(--deep);color:var(--gold);border:none;border-radius:100px;padding:14px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;cursor:pointer;margin-top:8px;}
+  .pay-instructions{background:var(--sand);border-radius:6px;padding:18px;font-size:13px;color:#3a4542;margin-bottom:18px;line-height:1.7;}
+  .pay-instructions .num{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--deep);font-size:15px;}
+  .placeholder-flag{color:#b5522f;font-size:11px;font-style:italic;}
+
+  #invoice-modal .modal-box{max-width:440px;}
+  .inv-header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px dashed var(--line-l);padding-bottom:16px;margin-bottom:16px;}
+  .inv-brand{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;}
+  .inv-brand em{color:var(--gold-deep);font-style:italic;}
+  .inv-meta{text-align:right;font-size:12px;color:#5c6862;}
+  .inv-line{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;}
+  .inv-total{display:flex;justify-content:space-between;font-size:16px;font-weight:700;border-top:1px solid var(--line-l);margin-top:10px;padding-top:12px;}
+  .inv-status{margin-top:16px;font-size:12px;background:#FBF0E4;color:var(--gold-deep);padding:10px 14px;border-radius:4px;text-align:center;font-weight:600;}
+  .inv-actions{display:flex;gap:10px;margin-top:20px;}
+  .inv-actions button{flex:1;border-radius:100px;padding:12px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;cursor:pointer;border:none;}
+  .inv-print{background:transparent;border:1px solid var(--ink) !important;color:var(--ink);}
+  .inv-send{background:var(--deep);color:var(--gold);}
+
+  /* CHAT BUBBLE */
+  #chat-bubble{position:fixed;bottom:26px;right:26px;width:58px;height:58px;border-radius:50%;background:var(--gold);color:var(--deep);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.25);z-index:140;transition:transform .2s ease;}
+  #chat-bubble:hover{transform:scale(1.06);}
+  #chat-bubble svg{width:26px;height:26px;}
+  #chat-panel{position:fixed;bottom:96px;right:26px;width:300px;background:var(--sand2);border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,0.25);z-index:141;display:none;flex-direction:column;overflow:hidden;}
+  #chat-panel.open{display:flex;}
+  .chat-head{background:var(--deep);color:var(--sand2);padding:16px 18px;font-size:14px;font-weight:600;}
+  .chat-body{padding:16px 18px;font-size:13px;color:#3a4542;}
+  .chat-bubble-msg{background:var(--sand);border-radius:8px;padding:12px 14px;margin-bottom:14px;}
+  .chat-input-row{display:flex;gap:8px;padding:0 18px 18px;}
+  .chat-input-row input{flex:1;padding:10px 12px;border:1px solid var(--line-l);border-radius:100px;font-size:13px;font-family:inherit;}
+  .chat-send{background:var(--gold);color:var(--deep);border:none;border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:15px;flex-shrink:0;}
+
+  @media(max-width:960px){
     .hero-inner{grid-template-columns:1fr;}
-    .ticket{order:-1;}
-    .grid{grid-template-columns:repeat(2,1fr);}
-    .fashion-grid{grid-template-columns:repeat(2,1fr);}
+    .seal{order:-1;margin-bottom:20px;}
+    .grid3{grid-template-columns:repeat(2,1fr);}
+    .grid4{grid-template-columns:repeat(2,1fr);}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,180px);}
+    .g-item.tall{grid-row:span 1;}
+    .testi-grid{grid-template-columns:1fr;}
     .steps{grid-template-columns:1fr;}
+    .pay-methods{grid-template-columns:1fr;}
+    .story{grid-template-columns:1fr;padding:40px 28px;}
     .foot-top{grid-template-columns:1fr 1fr;}
     .nav-links{display:none;}
     .band-tabs{flex-wrap:wrap;}
+    #chat-panel{width:88vw;right:6vw;}
+  }
+  @media print{
+    body *{visibility:hidden;}
+    #invoice-modal, #invoice-modal *{visibility:visible;}
+    #invoice-modal{position:absolute;top:0;left:0;width:100%;background:#fff;}
+    #invoice-modal .modal-box{box-shadow:none;max-width:100%;}
+    .modal-close, .inv-actions{display:none !important;}
   }
   @media(prefers-reduced-motion:reduce){*{transition:none !important;}}
 </style>
@@ -231,121 +352,259 @@
 
 <header>
   <div class="nav">
-    <div class="logo">Fibis<span>Web</span></div>
+    <div class="logo">Fibis <em>Web</em></div>
     <div class="nav-links">
-      <a href="#nourriture">Nourriture</a>
-      <a href="#boutique">Boutique</a>
       <a href="#parfums">Parfums</a>
-      <a href="#commande">Précommander</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#avis">Avis</a>
+      <a href="#newsletter">Newsletter</a>
       <a href="#contact">Contact</a>
     </div>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <a href="https://wa.me/201282226808" target="_blank" rel="noopener" class="cart-btn">WhatsApp</a>
-      <button class="cart-btn" onclick="toast('Panier — fonctionnalité de démonstration')">
-        Panier <span id="cart-count" class="mono">0</span>
-      </button>
+    <div class="header-actions">
+      <a href="https://wa.me/201282226808" target="_blank" rel="noopener" class="icon-btn">WhatsApp</a>
+      <a href="mailto:plamedilufiaulusu101@gmail.com" class="icon-btn">Email</a>
+      <button class="cart-btn" id="open-cart-btn">Panier <span id="cart-count" class="mono">0</span></button>
     </div>
   </div>
 </header>
 
+<div id="cart-overlay"></div>
+<div id="cart-drawer">
+  <div class="cart-head"><h3>Votre panier</h3><button class="cart-close" id="close-cart-btn">✕</button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Total</span><span class="mono" id="cart-total">0,00 €</span></div>
+    <button class="checkout-btn" id="checkout-btn">Passer commande</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="payment-modal">
+  <div class="modal-box">
+    <button class="modal-close" data-close="payment-modal">✕</button>
+    <h3>Choisissez votre mode de paiement</h3>
+    <p class="sub">Le paiement se confirme manuellement avec vous, sans passerelle automatique.</p>
+    <div id="method-list"></div>
+    <button class="continue-btn" id="continue-payment">Continuer</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="invoice-modal">
+  <div class="modal-box">
+    <button class="modal-close" data-close="invoice-modal">✕</button>
+    <div class="inv-header">
+      <div class="inv-brand">Fibis <em>Web</em></div>
+      <div class="inv-meta" id="inv-meta"></div>
+    </div>
+    <div id="inv-lines"></div>
+    <div class="inv-total"><span>Total</span><span class="mono" id="inv-total"></span></div>
+    <div id="inv-instructions"></div>
+    <div class="inv-status">En attente de confirmation du paiement</div>
+    <div class="inv-actions">
+      <button class="inv-print" onclick="window.print()">Imprimer / PDF</button>
+      <button class="inv-send" id="inv-send-btn">Envoyer sur WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<div id="chat-bubble">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</div>
+<div id="chat-panel">
+  <div class="chat-head">Fibis Web — Discutons</div>
+  <div class="chat-body">
+    <div class="chat-bubble-msg">Bonjour ! Une question sur un parfum, un article, ou une commande ? Écrivez-nous, on répond vite sur WhatsApp.</div>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" id="chat-input" placeholder="Votre message...">
+    <button class="chat-send" id="chat-send">→</button>
+  </div>
+</div>
+
 <div class="hero">
+  <svg class="palm p1" viewBox="0 0 200 200" fill="none"><path d="M100 190 C100 120 60 80 20 60 C60 70 100 100 100 100 C100 100 110 60 150 40 C120 65 100 110 100 190Z" fill="#C6A15B"/></svg>
+  <svg class="palm p2" viewBox="0 0 200 200" fill="none"><path d="M100 190 C100 120 60 80 20 60 C60 70 100 100 100 100 C100 100 110 60 150 40 C120 65 100 110 100 190Z" fill="#4FBBA6"/></svg>
   <div class="hero-inner">
     <div>
-      <div class="eyebrow">Saveurs du pays, style d'ici</div>
-      <h1>Chikwang à la commande.<br>Style <span class="accent">sans détour.</span></h1>
-      <p>Fibis Web réunit trois univers : la cuisine africaine préparée sur précommande, une sélection de vêtements et accessoires, et des parfums et huiles essentielles d'Égypte. Livraison en Égypte et à Kinshasa.</p>
+      <div class="eyebrow">Parfums d'Égypte & mode d'ailleurs</div>
+      <h1>Votre oasis de parfums<br><em>et de style.</em></h1>
+      <p>Fibis Web réunit des parfums et huiles essentielles distillés en Égypte, et une sélection de vêtements et accessoires. Livraison en Égypte et à Kinshasa, paiement M-Pesa ou Orange Money.</p>
       <div class="hero-ctas">
-        <a href="#nourriture" class="btn-primary">Précommander un plat</a>
-        <a href="#boutique" class="btn-outline">Voir la boutique</a>
+        <a href="#parfums" class="btn-gold">Découvrir les parfums</a>
+        <a href="#boutique" class="btn-line">Voir la boutique</a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Paiement M-Pesa & Orange Money</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Livraison Égypte & Kinshasa</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Facture pour chaque achat</div>
       </div>
     </div>
-    <div class="ticket">
-      <div class="ticket-row">
-        <span class="mono">TICKET Nº 0148</span>
-        <span class="mono">PRÉCOMMANDE</span>
+    <div class="seal">
+      <div class="seal-inner">
+        <span class="top">Fibis Web</span>
+        <span class="mid">Boutique<br>Premium</span>
+        <span class="bot">Édition Oasis</span>
       </div>
-      <div class="ticket-dashes"></div>
-      <div class="ticket-title">Chikwang + Makayabu</div>
-      <div class="ticket-sub">Retrait sous 5h — préparé à la commande</div>
-      <div class="ticket-price">10,50 €</div>
-      <div class="ticket-dashes"></div>
-      <div class="ticket-row"><span>Commande passée avant</span><span class="mono">Jeudi 18h</span></div>
-      <div class="ticket-row"><span>Retrait estimé</span><span class="mono">Samedi</span></div>
     </div>
   </div>
   <div class="band-tabs">
-    <div class="band-tab active">Nourriture africaine</div>
-    <div class="band-tab">Vêtements</div>
-    <div class="band-tab">Accessoires</div>
-    <div class="band-tab">Parfums d'Égypte</div>
+    <div class="band-tab active" data-target="parfums">Parfums d'Égypte</div>
+    <div class="band-tab" data-target="boutique">Mode & accessoires</div>
+    <div class="band-tab" data-target="galerie">Galerie</div>
+    <div class="band-tab" data-target="avis">Avis clients</div>
   </div>
+  <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,35 C960,70 1200,15 1440,45 L1440,90 L0,90 Z" fill="#F7F1E3"/></svg></div>
 </div>
 
 <div class="wrap">
-<section id="nourriture">
-  <div class="section-head">
-    <div>
-      <h2>Nourriture — sur précommande</h2>
-      <p>Plats préparés à la commande, à retirer selon un créneau confirmé après validation.</p>
+<section id="signature">
+  <div class="signature-banner reveal">
+    <div class="signature-visual">
+      <img src="images/fibis-signature-set.jpg" alt="Fibis — Extrait de Parfum, coffret signature">
     </div>
-    <span class="num">/ précommande 48h</span>
+    <div class="signature-copy">
+      <div class="eyebrow">Édition signature</div>
+      <h2>Fibis — Extrait<br>de Parfum.</h2>
+      <p>Notre première création maison : un extrait de parfum à 30% de concentration, pensé pour homme et femme, dans un flacon de 100ml inspiré des trésors d'Égypte.</p>
+      <div class="signature-specs">
+        <div><span>30%</span><small>Concentration</small></div>
+        <div><span>8-12h</span><small>Tenue</small></div>
+        <div><span>100ml</span><small>Contenance</small></div>
+      </div>
+      <div class="hero-ctas">
+        <button class="btn-gold" onclick="buyNow(allProducts['p7'])">Commander maintenant</button>
+      </div>
+    </div>
   </div>
-  <div class="grid" id="food-grid"></div>
 </section>
 </div>
 
-<div class="fashion-band">
+<div class="wrap">
+<section id="parfums">
+  <div class="section-head reveal">
+    <div><h2>Parfums & huiles essentielles d'Égypte</h2><p>Essences distillées en Égypte, flacons prêts à expédier.</p></div>
+    <span class="num">/ 07 essences</span>
+  </div>
+  <div class="grid3" id="perfume-grid"></div>
+</section>
+</div>
+
+<div class="boutique-band">
+  <svg class="palm p1" viewBox="0 0 200 200" fill="none" style="position:absolute;top:0;left:-40px;width:220px;opacity:0.08;"><path d="M100 190 C100 120 60 80 20 60 C60 70 100 100 100 100 C100 100 110 60 150 40 C120 65 100 110 100 190Z" fill="#4FBBA6"/></svg>
   <div class="wrap">
   <section id="boutique">
-    <div class="section-head">
-      <div>
-        <h2>Boutique — vêtements & accessoires</h2>
-        <p>Une sélection de pièces prêtes à expédier, sans délai de précommande.</p>
-      </div>
-      <span class="num" style="color:var(--pale-red)">/ 08 articles</span>
+    <div class="section-head reveal">
+      <div><h2>Mode & accessoires</h2><p>Une sélection de pièces prêtes à expédier, sans délai.</p></div>
+      <span class="num" style="color:var(--gold)">/ 08 articles</span>
     </div>
-    <div class="fashion-grid" id="fashion-grid"></div>
+    <div class="grid4" id="fashion-grid"></div>
   </section>
   </div>
 </div>
 
 <div class="wrap">
-<section id="parfums">
-  <div class="section-head">
-    <div>
-      <h2>Parfums & huiles essentielles d'Égypte</h2>
-      <p>Essences distillées en Égypte — flacons prêts à expédier, sans délai de précommande.</p>
-    </div>
-    <span class="num">/ 06 essences</span>
+<section id="galerie">
+  <div class="section-head reveal">
+    <div><h2>Coup de cœur</h2><p>Un aperçu de l'univers Fibis Web — vos photos viendront remplacer ces visuels.</p></div>
   </div>
-  <div class="grid" id="perfume-grid"></div>
+  <div class="gallery-grid reveal" id="gallery-grid"></div>
+  <p class="gallery-note">Illustrations provisoires — à remplacer par vos vraies photos produit dès que possible.</p>
+</section>
+</div>
+
+<div class="wrap">
+<section id="histoire">
+  <div class="story reveal">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Notre histoire</div>
+      <h2>Un parfum d'ailleurs, un style qui voyage.</h2>
+      <p>Fibis Web est né de l'envie de faire voyager deux mondes : les essences précieuses d'Égypte, et une mode qui raconte une origine. Chaque flacon, chaque pièce est choisie avec soin.</p>
+    </div>
+    <div>
+      <p>Sincère et sans intermédiaire inutile — chaque commande est suivie personnellement, du paiement jusqu'à la livraison, avec une facture claire à chaque étape.</p>
+      <div class="story-stats">
+        <div><span>2</span><small>Pays livrés</small></div>
+        <div><span>100%</span><small>Sourcé en Égypte</small></div>
+        <div><span>2</span><small>Moyens de paiement mobile</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="wrap">
+<section id="avis">
+  <div class="section-head reveal">
+    <div><h2>Ce qu'en disent nos clients</h2><p>Quelques retours, et votre avis est toujours le bienvenu.</p></div>
+  </div>
+  <div class="testi-grid reveal" id="testi-grid"></div>
+  <div class="review-form reveal">
+    <h3>Laisser un avis</h3>
+    <label>Votre note</label>
+    <div class="star-select" id="star-select">
+      <span data-v="1">★</span><span data-v="2">★</span><span data-v="3">★</span><span data-v="4">★</span><span data-v="5">★</span>
+    </div>
+    <label>Votre prénom</label>
+    <input type="text" id="review-name" placeholder="Votre prénom">
+    <label>Votre avis</label>
+    <textarea id="review-text" rows="3" placeholder="Racontez votre expérience..."></textarea>
+    <button class="review-submit" id="review-submit">Publier mon avis</button>
+  </div>
 </section>
 </div>
 
 <div class="wrap">
 <section id="commande">
-  <div class="section-head">
-    <div>
-      <h2>Comment marche la précommande</h2>
-      <p>Un circuit simple, pensé pour des plats préparés frais.</p>
-    </div>
+  <div class="section-head reveal">
+    <div><h2>Comment ça marche</h2><p>De la commande à la livraison, en toute transparence.</p></div>
   </div>
-  <div class="steps">
-    <div class="step">
-      <span class="n">01</span>
-      <h3>Choisissez votre plat</h3>
-      <p>Sélectionnez un plat dans la section Nourriture et validez votre précommande.</p>
-    </div>
-    <div class="step">
-      <span class="n">02</span>
-      <h3>Confirmation du créneau</h3>
-      <p>Vous recevez un créneau de retrait confirmé, en général sous 48h.</p>
-    </div>
-    <div class="step">
-      <span class="n">03</span>
-      <h3>Retrait ou livraison</h3>
-      <p>Votre plat est prêt au créneau indiqué, préparé le jour même du retrait.</p>
-    </div>
+  <div class="steps reveal">
+    <div class="step"><span class="n">01</span><h3>Ajoutez au panier</h3><p>Parfums, huiles, vêtements ou accessoires.</p></div>
+    <div class="step"><span class="n">02</span><h3>Choisissez le paiement</h3><p>M-Pesa, Orange Money, ou commande directe sur WhatsApp.</p></div>
+    <div class="step"><span class="n">03</span><h3>Recevez votre facture</h3><p>Un reçu détaillé, puis suivi de la livraison.</p></div>
+  </div>
+</section>
+</div>
+
+<div class="wrap">
+<section id="paiement">
+  <div class="section-head reveal">
+    <div><h2>Moyens de paiement</h2><p>Paiement mobile, confirmé manuellement avec vous.</p></div>
+  </div>
+  <div class="pay-methods reveal">
+    <div class="pay-card"><div class="pay-badge">M</div><h3>M-Pesa</h3><p>Envoi direct au numéro fourni à la commande.</p></div>
+    <div class="pay-card"><div class="pay-badge">OM</div><h3>Orange Money</h3><p>Envoi direct au numéro fourni à la commande.</p></div>
+    <div class="pay-card"><div class="pay-badge">W</div><h3>WhatsApp</h3><p>Commande directe, paiement à convenir avec vous.</p></div>
+  </div>
+</section>
+</div>
+
+<div class="wrap">
+<section id="faq">
+  <div class="section-head reveal">
+    <div><h2>Questions fréquentes</h2><p>Tout ce qu'il faut savoir avant de commander.</p></div>
+  </div>
+  <div class="faq-list reveal" id="faq-list"></div>
+</section>
+</div>
+
+<div class="wrap">
+<section id="newsletter">
+  <div class="newsletter-box reveal">
+    <div class="eyebrow" style="color:var(--gold)">Restez informé</div>
+    <h2>Recevez nos offres et actualités</h2>
+    <p class="nl-sub">Inscrivez-vous pour être averti des nouveautés et des offres — les vôtres, et celles de partenaires sélectionnés si vous le souhaitez.</p>
+    <form id="newsletter-form" action="https://formspree.io/f/xzdnwwek" method="POST">
+      <div class="nl-row">
+        <input type="text" name="prenom" placeholder="Votre prénom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+      </div>
+      <label class="nl-check">
+        <input type="checkbox" name="consentement" value="oui" required>
+        <span>J'accepte de recevoir des offres et actualités de Fibis Web et de ses partenaires sélectionnés par email. Je peux me désinscrire à tout moment.</span>
+      </label>
+      <button type="submit" class="btn-gold">S'inscrire</button>
+    </form>
   </div>
 </section>
 </div>
@@ -353,20 +612,9 @@
 <footer id="contact">
   <div class="wrap">
     <div class="foot-top">
-      <div class="foot-col">
-        <h4>Fibis Web</h4>
-        <p style="max-width:240px;">Nourriture africaine sur précommande, vêtements, accessoires et parfums d'Égypte.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Nourriture</h4>
-        <a href="#nourriture">Plats de la semaine</a>
-        <a href="#commande">Précommander</a>
-      </div>
-      <div class="foot-col">
-        <h4>Boutique</h4>
-        <a href="#boutique">Vêtements</a>
-        <a href="#parfums">Parfums & huiles</a>
-      </div>
+      <div class="foot-col"><h4>Fibis Web</h4><p style="max-width:240px;">Parfums et huiles essentielles d'Égypte, vêtements et accessoires.</p></div>
+      <div class="foot-col"><h4>Boutique</h4><a href="#parfums">Parfums & huiles</a><a href="#boutique">Mode & accessoires</a></div>
+      <div class="foot-col"><h4>Infos</h4><a href="#paiement">Paiement</a><a href="#faq">FAQ</a></div>
       <div class="foot-col">
         <h4>Contact & livraison</h4>
         <a href="https://wa.me/201282226808" target="_blank" rel="noopener">WhatsApp : +20 128 222 6808</a>
@@ -374,140 +622,422 @@
         <p>Livraison en Égypte et à Kinshasa</p>
       </div>
     </div>
-
-    <div class="foot-bottom">
-      <span>© 2026 Fibis Web — site de démonstration</span>
-      <span class="mono">Fait à la commande</span>
-    </div>
+    <div class="foot-bottom"><span>© 2026 Fibis Web</span><span class="mono">Votre oasis de style</span></div>
   </div>
 </footer>
 
 <div id="toast"></div>
 
 <script>
-const foodItems = [
-  {cat:'Précommande', title:'Chikwang nature', desc:"Pain de manioc fermenté, enveloppé en feuilles, préparé à la commande.", price:'6,50 €', tag:'J-2'},
-  {cat:'Précommande', title:'Chikwang + Makayabu', desc:"Chikwang accompagné de poisson salé mijoté à la tomate.", price:'12,50 €', tag:'J-2'},
-  {cat:'Précommande', title:'Saka-saka poulet', desc:"Feuilles de manioc pilées, mijotées, servies avec poulet fermier.", price:'11,00 €', tag:'J-2'},
-  {cat:'Précommande', title:'Beignets maison', desc:"Beignets moelleux, lot de 6, préparés le jour du retrait.", price:'4,00 €', tag:'J-1'},
-  {cat:'Précommande', title:'Jus de bissap', desc:"Infusion d'hibiscus maison, servie fraîche, sans sucre ajouté.", price:'3,50 €', tag:'J-1'},
-  {cat:'Précommande', title:'Coffret découverte', desc:"Chikwang, saka-saka et beignets — pour découvrir la carte.", price:'19,00 €', tag:'J-2'},
-];
+const WHATSAPP_NUMBER = "201282226808";
+const MPESA_NUMBER = "0821801279";
+const ORANGE_NUMBER = "0891247689";
 
 const perfumeItems = [
-  {cat:'Parfum', title:'Musc noir du Caire', desc:"Fragrance boisée et musquée, distillée artisanalement au Caire.", price:'22,00 €'},
-  {cat:'Huile essentielle', title:'Huile de rose de Fayoum', desc:"Extraite des roseraies du Fayoum, pure à 100%.", price:'18,50 €'},
-  {cat:'Parfum', title:'Ambre du Nil', desc:"Notes chaudes d'ambre et de bois de santal, flacon 15ml.", price:'25,00 €'},
-  {cat:'Huile essentielle', title:'Huile de nigelle', desc:"Pressée à froid, connue pour ses vertus traditionnelles.", price:'14,00 €'},
-  {cat:'Parfum', title:'Jasmin d\\'Alexandrie', desc:"Absolue de jasmin, fraîche et florale, flacon 15ml.", price:'23,50 €'},
-  {cat:'Huile essentielle', title:'Huile de karkadé', desc:"Infusion d'hibiscus égyptien en huile de soin.", price:'12,00 €'},
+  {id:'p7', cat:'Édition signature', title:'Fibis — Extrait de Parfum', desc:"Notre création maison, 30% de concentration, pour homme et femme.", price:45.00, img:'images/fibis-signature-bottle.jpg'},
+  {id:'p1', cat:'Parfum', title:'Musc noir du Caire', desc:"Fragrance boisée et musquée, distillée artisanalement au Caire.", price:22.00, icon:'bottle-round', color:'#8F7434'},
+  {id:'p2', cat:'Huile essentielle', title:'Huile de rose de Fayoum', desc:"Extraite des roseraies du Fayoum, pure à 100%.", price:18.50, icon:'dropper', color:'#4FBBA6'},
+  {id:'p3', cat:'Parfum', title:'Ambre du Nil', desc:"Notes chaudes d'ambre et de bois de santal, flacon 15ml.", price:25.00, icon:'bottle-tall', color:'#0B3D37'},
+  {id:'p4', cat:'Huile essentielle', title:'Huile de nigelle', desc:"Pressée à froid, connue pour ses vertus traditionnelles.", price:14.00, icon:'dropper', color:'#1F7A6C'},
+  {id:'p5', cat:'Parfum', title:"Jasmin d'Alexandrie", desc:"Absolue de jasmin, fraîche et florale, flacon 15ml.", price:23.50, icon:'bottle-flask', color:'#C6A15B'},
+  {id:'p6', cat:'Huile essentielle', title:'Huile de karkadé', desc:"Infusion d'hibiscus égyptien en huile de soin.", price:12.00, icon:'dropper', color:'#8F7434'},
 ];
 
 const fashionItems = [
-  {cat:'Vêtements', title:'Chemise imprimé wax', price:'32,00 €'},
-  {cat:'Vêtements', title:'Robe tissu traditionnel', price:'45,00 €'},
-  {cat:'Accessoires', title:'Bijoux perles artisanales', price:'14,00 €'},
-  {cat:'Accessoires', title:'Sac tissé fait main', price:'26,00 €'},
-  {cat:'Vêtements', title:'T-shirt brodé Fibis', price:'19,00 €'},
-  {cat:'Accessoires', title:'Bonnet tricoté', price:'12,00 €'},
-  {cat:'Vêtements', title:'Ensemble deux pièces wax', price:'52,00 €'},
-  {cat:'Accessoires', title:'Ceinture en cuir tressé', price:'18,00 €'},
+  {id:'v1', cat:'Vêtements', title:'Chemise imprimé wax', price:32.00, icon:'shirt'},
+  {id:'v2', cat:'Vêtements', title:'Robe tissu traditionnel', price:45.00, icon:'dress'},
+  {id:'v3', cat:'Accessoires', title:'Bijoux perles artisanales', price:14.00, icon:'jewelry'},
+  {id:'v4', cat:'Accessoires', title:'Sac tissé fait main', price:26.00, icon:'bag'},
+  {id:'v5', cat:'Vêtements', title:'T-shirt brodé Fibis', price:19.00, icon:'tshirt'},
+  {id:'v6', cat:'Accessoires', title:'Bonnet tricoté', price:12.00, icon:'beanie'},
+  {id:'v7', cat:'Vêtements', title:'Ensemble deux pièces wax', price:52.00, icon:'set'},
+  {id:'v8', cat:'Accessoires', title:'Ceinture en cuir tressé', price:18.00, icon:'belt'},
 ];
 
-const foodGrid = document.getElementById('food-grid');
-const fashionGrid = document.getElementById('fashion-grid');
-const perfumeGrid = document.getElementById('perfume-grid');
-let cartCount = 0;
+
+let reviews = [
+  {name:'Yara', loc:'Le Caire', stars:5, quote:"L'huile de rose sent incroyablement bon, le flacon est arrivé bien protégé. Je recommande."},
+  {name:'Grâce', loc:'Kinshasa', stars:5, quote:"La robe en tissu traditionnel est magnifique, la qualité est vraiment au rendez-vous."},
+  {name:'Samuel', loc:'Kinshasa', stars:5, quote:"Commande simple, facture claire, tout est arrivé comme prévu. Très professionnel."},
+  {name:'Nourhan', loc:'Alexandrie', stars:5, quote:"Le musc noir du Caire est devenu mon parfum du quotidien. Livraison rapide."},
+  {name:'Divine', loc:'Kinshasa', stars:5, quote:"Le sac tissé fait main est encore plus beau en vrai. Service au top."},
+];
+
+const faqs = [
+  {q:"Quels sont les moyens de paiement acceptés ?", a:"M-Pesa, Orange Money, ou une commande directe confirmée sur WhatsApp. Le paiement mobile se confirme manuellement avec vous après l'envoi."},
+  {q:"Livrez-vous en dehors de l'Égypte et de Kinshasa ?", a:"Pour l'instant, les livraisons sont assurées en Égypte et à Kinshasa (RDC). Contactez-nous sur WhatsApp pour toute autre zone."},
+  {q:"Est-ce que je reçois une facture ?", a:"Oui, une facture détaillée est générée pour chaque commande, avec un numéro unique, imprimable ou enregistrable en PDF."},
+  {q:"Puis-je modifier ou annuler ma commande ?", a:"Oui, tant que la commande n'a pas été expédiée — contactez-nous rapidement sur WhatsApp pour toute modification."},
+];
+
+function perfumeIcon(type, color, id){
+  const gid = 'pg-' + id;
+  const grad = `<defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${color}" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="${color}" stop-opacity="0.95"/>
+    </linearGradient></defs>`;
+  if(type === 'dropper'){
+    return `<svg width="46" height="88" viewBox="0 0 46 88" fill="none">${grad}
+      <ellipse cx="23" cy="12" rx="13" ry="10" fill="${color}" opacity="0.85"/>
+      <rect x="19" y="18" width="8" height="14" fill="${color}" opacity="0.6"/>
+      <rect x="14" y="30" width="18" height="50" rx="6" fill="url(#${gid})" stroke="${color}" stroke-width="1.5"/>
+      <rect x="14" y="30" width="18" height="14" fill="#fff" opacity="0.15"/>
+      <text x="23" y="60" font-family="Georgia,serif" font-size="6" fill="#fff" text-anchor="middle" letter-spacing="1" opacity="0.9">FIBIS</text>
+    </svg>`;
+  }
+  if(type === 'bottle-tall'){
+    return `<svg width="42" height="90" viewBox="0 0 42 90" fill="none">${grad}
+      <rect x="15" y="4" width="12" height="10" rx="2" fill="${color}"/>
+      <rect x="12" y="14" width="18" height="8" rx="3" fill="${color}" opacity="0.6"/>
+      <rect x="8" y="22" width="26" height="60" rx="5" fill="url(#${gid})"/>
+      <rect x="8" y="22" width="26" height="16" fill="#fff" opacity="0.12"/>
+      <rect x="12" y="52" width="18" height="16" rx="2" fill="#fff" opacity="0.85"/>
+      <text x="21" y="62" font-family="Georgia,serif" font-size="5.5" fill="${color}" text-anchor="middle" letter-spacing="0.5">FIBIS</text>
+    </svg>`;
+  }
+  if(type === 'bottle-flask'){
+    return `<svg width="52" height="82" viewBox="0 0 52 82" fill="none">${grad}
+      <rect x="20" y="4" width="12" height="10" rx="2" fill="#0B3D37"/>
+      <rect x="16" y="14" width="20" height="8" rx="3" fill="${color}" opacity="0.7"/>
+      <path d="M12 22 L40 22 L46 78 Q26 86 6 78 Z" fill="url(#${gid})"/>
+      <path d="M12 22 L40 22 L38 36 L14 36 Z" fill="#fff" opacity="0.15"/>
+      <text x="26" y="58" font-family="Georgia,serif" font-size="6" fill="#fff" text-anchor="middle" letter-spacing="1">FIBIS</text>
+    </svg>`;
+  }
+  return `<svg width="60" height="84" viewBox="0 0 60 84" fill="none">${grad}
+    <rect x="22" y="4" width="16" height="12" rx="2" fill="#0B3D37"/>
+    <rect x="17" y="16" width="26" height="9" rx="3" fill="${color}" opacity="0.7"/>
+    <path d="M15 25 h30 v9 q0 7 -7 7 h-16 q-7 0 -7 -7 z" fill="${color}" opacity="0.35"/>
+    <rect x="11" y="41" width="38" height="40" rx="7" fill="url(#${gid})"/>
+    <rect x="11" y="41" width="38" height="11" fill="#fff" opacity="0.12"/>
+    <rect x="18" y="58" width="24" height="15" rx="2" fill="#fff" opacity="0.9"/>
+    <text x="30" y="68" font-family="Georgia,serif" font-size="6" fill="${color}" text-anchor="middle" letter-spacing="0.5">FIBIS</text>
+  </svg>`;
+}
+
+function fashionIcon(type, id){
+  const g = 'var(--gold)', d = 'var(--deep3)';
+  const tag = `<g><rect x="2" y="2" width="15" height="9" rx="2" fill="#F7F1E3" stroke="${g}" stroke-width="1"/><text x="9.5" y="9" font-family="Georgia,serif" font-size="5.5" fill="var(--deep)" text-anchor="middle">FW</text></g>`;
+  switch(type){
+    case 'dress':
+      return `<svg width="48" height="78" viewBox="0 0 48 78" fill="none"><path d="M17 2 L31 2 L34 20 L44 74 Q24 82 4 74 L14 20 Z" fill="${g}" opacity="0.85"/><path d="M17 2 L31 2 L29 14 L19 14 Z" fill="${d}"/>${tag}</svg>`;
+    case 'jewelry':
+      return `<svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="24" r="18" fill="none" stroke="${g}" stroke-width="3"/><circle cx="30" cy="46" r="5" fill="${g}"/><circle cx="18" cy="20" r="3" fill="${g}" opacity="0.6"/><circle cx="42" cy="20" r="3" fill="${g}" opacity="0.6"/>${tag}</svg>`;
+    case 'bag':
+      return `<svg width="58" height="60" viewBox="0 0 58 60" fill="none"><path d="M10 22 h38 l4 34 q-23 8 -46 0 z" fill="${g}" opacity="0.85"/><path d="M18 22 v-6 a11 11 0 0 1 22 0 v6" fill="none" stroke="${g}" stroke-width="3"/><text x="29" y="42" font-family="Georgia,serif" font-size="6" fill="var(--deep)" text-anchor="middle" letter-spacing="0.5">FIBIS</text></svg>`;
+    case 'tshirt':
+      return `<svg width="58" height="62" viewBox="0 0 58 62" fill="none"><path d="M18 4 L8 14 L14 24 L20 20 V58 H38 V20 L44 24 L50 14 L40 4 Q29 10 18 4Z" fill="${g}" opacity="0.85"/>${tag}</svg>`;
+    case 'beanie':
+      return `<svg width="56" height="50" viewBox="0 0 56 50" fill="none"><path d="M8 34 Q8 6 28 6 Q48 6 48 34 Z" fill="${g}" opacity="0.85"/><rect x="6" y="32" width="44" height="12" rx="6" fill="${d}"/>${tag}</svg>`;
+    case 'set':
+      return `<svg width="52" height="80" viewBox="0 0 52 80" fill="none"><rect x="12" y="4" width="28" height="30" rx="5" fill="${g}" opacity="0.85"/><path d="M10 38 h32 l4 38 q-20 6 -40 0 z" fill="${d}" opacity="0.9"/>${tag}</svg>`;
+    case 'belt':
+      return `<svg width="70" height="40" viewBox="0 0 70 40" fill="none"><rect x="4" y="14" width="62" height="12" rx="4" fill="${g}" opacity="0.85"/><rect x="28" y="8" width="14" height="24" rx="3" fill="${d}"/><text x="35" y="20" font-family="Georgia,serif" font-size="5" fill="${g}" text-anchor="middle">FW</text></svg>`;
+    default:
+      return `<svg width="56" height="76" viewBox="0 0 56 76" fill="none"><rect x="12" y="10" width="32" height="52" rx="4" fill="${g}" opacity="0.85"/><rect x="18" y="0" width="20" height="14" rx="4" fill="${d}"/>${tag}</svg>`;
+  }
+}
+
+function pulseCart(){
+  const btn = document.getElementById('open-cart-btn');
+  btn.classList.remove('pulse');
+  void btn.offsetWidth;
+  btn.classList.add('pulse');
+}
+
+function renderProductGrid(items, containerId, kind){
+  const grid = document.getElementById(containerId);
+  items.forEach(p => {
+    const card = document.createElement('div');
+    if(kind === 'perfume'){
+      card.className = 'p-card reveal';
+      card.innerHTML = `
+        <div class="p-visual">${p.img ? `<img src="${p.img}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;">` : perfumeIcon(p.icon, p.color, p.id)}</div>
+        <div class="p-body">
+          <div class="p-cat">${p.cat}</div>
+          <div class="p-title">${p.title}</div>
+          <p class="p-desc">${p.desc}</p>
+          <div class="p-price-row"><span class="price">${p.price.toFixed(2).replace('.',',')} €</span></div>
+          <div class="p-btn-row">
+            <button class="add-btn" data-id="${p.id}">Ajouter</button>
+            <button class="buy-btn" data-id="${p.id}">Commander</button>
+          </div>
+        </div>`;
+      card.querySelector('.add-btn').addEventListener('click', (e) => {
+        addToCart(p);
+        pulseCart();
+        const btn = e.currentTarget;
+        const orig = btn.textContent;
+        btn.textContent = 'Ajouté ✓';
+        btn.classList.add('added');
+        setTimeout(()=>{btn.textContent = orig; btn.classList.remove('added');}, 1200);
+      });
+      card.querySelector('.buy-btn').addEventListener('click', () => buyNow(p));
+    } else {
+      card.className = 'f-card reveal';
+      card.innerHTML = `
+        <div class="f-visual">${fashionIcon(p.icon, p.id)}</div>
+        <div class="f-body">
+          <div class="f-cat">${p.cat}</div>
+          <div class="f-title">${p.title}</div>
+          <div class="f-price-row"><span class="price mono">${p.price.toFixed(2).replace('.',',')} €</span></div>
+          <div class="f-btn-row">
+            <button class="mini-add" data-id="${p.id}" aria-label="Ajouter">+</button>
+            <button class="f-buy-btn" data-id="${p.id}">Commander</button>
+          </div>
+        </div>`;
+      card.querySelector('.mini-add').addEventListener('click', () => {
+        addToCart(p);
+        pulseCart();
+        toast(`${p.title} ajouté au panier`);
+      });
+      card.querySelector('.f-buy-btn').addEventListener('click', () => buyNow(p));
+    }
+    grid.appendChild(card);
+  });
+}
+renderProductGrid(perfumeItems, 'perfume-grid', 'perfume');
+renderProductGrid(fashionItems, 'fashion-grid', 'fashion');
+
+// gallery (illustrated placeholders)
+const galleryData = [
+  {cls:'tall', cap:"Fibis — Extrait de Parfum", color:'#C6A15B', img:'images/fibis-signature-specs.jpg'},
+  {cls:'wide', cap:"Mode wax", color:'#4FBBA6'},
+  {cls:'', cap:"Accessoires", color:'#1F7A6C'},
+  {cls:'', cap:"Huiles essentielles", color:'#8F7434'},
+  {cls:'wide', cap:"Édition Oasis", color:'#0B3D37'},
+];
+const galleryGrid = document.getElementById('gallery-grid');
+galleryData.forEach(g => {
+  const item = document.createElement('div');
+  item.className = 'g-item reveal ' + g.cls;
+  const visual = g.img
+    ? `<img src="${g.img}" alt="${g.cap}" style="width:100%;height:100%;object-fit:cover;">`
+    : `<svg width="100%" height="100%" viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="220" fill="${g.color}" opacity="0.16"/>
+        <circle cx="150" cy="100" r="50" fill="${g.color}" opacity="0.35"/>
+        <rect x="110" y="70" width="80" height="60" rx="8" fill="${g.color}" opacity="0.55"/>
+      </svg>`;
+  item.innerHTML = `${visual}<div class="g-cap">${g.cap}</div>`;
+  galleryGrid.appendChild(item);
+});
+
+// testimonials
+const testiGrid = document.getElementById('testi-grid');
+function renderTestimonials(){
+  testiGrid.innerHTML = '';
+  reviews.slice(0,6).forEach(t => {
+    const card = document.createElement('div');
+    card.className = 'testi-card reveal in';
+    card.innerHTML = `
+      <div class="stars">${'★'.repeat(t.stars)}${'☆'.repeat(5-t.stars)}</div>
+      <p class="testi-quote">"${t.quote}"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">${t.name.charAt(0)}</div>
+        <div><div class="testi-name">${t.name}</div><div class="testi-loc">${t.loc}</div></div>
+      </div>`;
+    testiGrid.appendChild(card);
+  });
+}
+renderTestimonials();
+
+// star select for review form
+let selectedStars = 5;
+const starEls = document.querySelectorAll('#star-select span');
+function paintStars(){
+  starEls.forEach(s => {
+    s.classList.toggle('active', parseInt(s.getAttribute('data-v')) <= selectedStars);
+  });
+}
+paintStars();
+starEls.forEach(s => {
+  s.addEventListener('click', () => {
+    selectedStars = parseInt(s.getAttribute('data-v'));
+    paintStars();
+  });
+});
+
+document.getElementById('review-submit').addEventListener('click', () => {
+  const name = document.getElementById('review-name').value.trim();
+  const text = document.getElementById('review-text').value.trim();
+  if(!name || !text){
+    toast('Ajoutez votre prénom et votre avis');
+    return;
+  }
+  reviews.unshift({name, loc:'', stars:selectedStars, quote:text});
+  renderTestimonials();
+  const waMsg = encodeURIComponent(`Nouvel avis Fibis Web\nNote : ${selectedStars}/5\nNom : ${name}\nAvis : ${text}`);
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`, '_blank');
+  document.getElementById('review-name').value = '';
+  document.getElementById('review-text').value = '';
+  toast('Merci pour votre avis !');
+});
+
+// FAQ
+const faqList = document.getElementById('faq-list');
+faqs.forEach(f => {
+  const item = document.createElement('div');
+  item.className = 'faq-item';
+  item.innerHTML = `<div class="faq-q"><span>${f.q}</span><span class="plus">+</span></div><div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>`;
+  item.querySelector('.faq-q').addEventListener('click', () => item.classList.toggle('open'));
+  faqList.appendChild(item);
+});
+
+// CART
+let cart = {};
 const cartCountEl = document.getElementById('cart-count');
+const cartItemsEl = document.getElementById('cart-items');
+const cartTotalEl = document.getElementById('cart-total');
+const cartDrawer = document.getElementById('cart-drawer');
+const cartOverlay = document.getElementById('cart-overlay');
+const allProducts = {};
+[...perfumeItems, ...fashionItems].forEach(p => allProducts[p.id] = p);
 
-foodItems.forEach(p => {
-  const card = document.createElement('div');
-  card.className = 'food-card';
-  card.innerHTML = `
-    <div class="food-visual">
-      <span class="preorder-tag">COMMANDE ${p.tag}</span>
-      <svg width="86" height="70" viewBox="0 0 86 70" fill="none">
-        <ellipse cx="43" cy="55" rx="34" ry="9" fill="#141010" opacity="0.06"/>
-        <path d="M14 40 Q43 20 72 40 L66 52 Q43 62 20 52 Z" fill="#B65C50" opacity="0.85"/>
-        <rect x="30" y="14" width="26" height="20" rx="4" fill="#141010" opacity="0.8"/>
-      </svg>
-    </div>
-    <div class="food-body">
-      <div class="food-cat">${p.cat}</div>
-      <div class="food-title">${p.title}</div>
-      <p class="food-desc">${p.desc}</p>
-      <div class="food-footer">
-        <span class="price">${p.price}</span>
-        <button class="add-btn">Précommander</button>
-      </div>
-    </div>
-  `;
-  card.querySelector('.add-btn').addEventListener('click', () => {
-    cartCount++;
-    cartCountEl.textContent = cartCount;
-    toast(`${p.title} — précommande ajoutée`);
+function addToCart(p){
+  if(!cart[p.id]) cart[p.id] = 0;
+  cart[p.id]++;
+  renderCart();
+}
+function changeQty(id, delta){
+  if(!cart[id]) return;
+  cart[id] += delta;
+  if(cart[id] <= 0) delete cart[id];
+  renderCart();
+}
+function renderCart(){
+  const ids = Object.keys(cart);
+  let count = 0, total = 0;
+  cartItemsEl.innerHTML = '';
+  if(ids.length === 0) cartItemsEl.innerHTML = '<div class="cart-empty">Votre panier est vide</div>';
+  ids.forEach(id => {
+    const p = allProducts[id]; const qty = cart[id];
+    count += qty; total += qty * p.price;
+    const line = document.createElement('div');
+    line.className = 'cart-line';
+    line.innerHTML = `
+      <div class="cart-line-info"><div class="cart-line-title">${p.title}</div><div class="cart-line-price">${p.price.toFixed(2).replace('.',',')} € l'unité</div></div>
+      <div class="qty-ctrl"><button class="qty-btn" data-action="minus" data-id="${id}">−</button><span class="qty-val">${qty}</span><button class="qty-btn" data-action="plus" data-id="${id}">+</button></div>`;
+    cartItemsEl.appendChild(line);
   });
-  foodGrid.appendChild(card);
+  cartItemsEl.querySelectorAll('.qty-btn').forEach(btn => {
+    btn.addEventListener('click', () => changeQty(btn.getAttribute('data-id'), btn.getAttribute('data-action')==='plus'?1:-1));
+  });
+  cartCountEl.textContent = count;
+  cartTotalEl.textContent = total.toFixed(2).replace('.',',') + ' €';
+}
+document.getElementById('open-cart-btn').addEventListener('click', () => { cartDrawer.classList.add('open'); cartOverlay.classList.add('open'); });
+document.getElementById('close-cart-btn').addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', () => { closeCart(); closeAllModals(); });
+function closeCart(){ cartDrawer.classList.remove('open'); cartOverlay.classList.remove('open'); }
+renderCart();
+
+// PAYMENT MODAL
+const methods = [
+  {id:'mpesa', name:'M-Pesa', sub:MPESA_NUMBER, icon:'M'},
+  {id:'orange', name:'Orange Money', sub:ORANGE_NUMBER, icon:'OM'},
+  {id:'whatsapp', name:'Commande directe sur WhatsApp', sub:'Paiement à convenir avec vous', icon:'W'},
+];
+let selectedMethod = 'mpesa';
+const methodListEl = document.getElementById('method-list');
+function renderMethods(){
+  methodListEl.innerHTML = '';
+  methods.forEach(m => {
+    const opt = document.createElement('div');
+    opt.className = 'method-option' + (m.id===selectedMethod ? ' selected' : '');
+    opt.innerHTML = `<div class="method-icon">${m.icon}</div><div><div class="method-name">${m.name}</div><div class="method-sub">${m.sub}</div></div>`;
+    opt.addEventListener('click', () => { selectedMethod = m.id; renderMethods(); });
+    methodListEl.appendChild(opt);
+  });
+}
+renderMethods();
+
+function openModal(id){ document.getElementById(id).classList.add('open'); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+function closeAllModals(){ closeModal('payment-modal'); closeModal('invoice-modal'); }
+document.querySelectorAll('.modal-close').forEach(btn => {
+  btn.addEventListener('click', () => closeModal(btn.getAttribute('data-close')));
 });
 
-perfumeItems.forEach(p => {
-  const card = document.createElement('div');
-  card.className = 'food-card';
-  card.innerHTML = `
-    <div class="food-visual">
-      <svg width="54" height="78" viewBox="0 0 54 78" fill="none">
-        <rect x="20" y="4" width="14" height="10" rx="2" fill="#141010"/>
-        <rect x="16" y="14" width="22" height="8" rx="3" fill="#B65C50" opacity="0.6"/>
-        <path d="M14 22 h26 v8 q0 6 -6 6 h-14 q-6 0 -6 -6 z" fill="#D9948A" opacity="0.35"/>
-        <rect x="10" y="36" width="34" height="38" rx="6" fill="#D9948A" opacity="0.85"/>
-        <rect x="10" y="36" width="34" height="10" fill="#141010" opacity="0.08"/>
-      </svg>
-    </div>
-    <div class="food-body">
-      <div class="food-cat">${p.cat}</div>
-      <div class="food-title">${p.title}</div>
-      <p class="food-desc">${p.desc}</p>
-      <div class="food-footer">
-        <span class="price">${p.price}</span>
-        <button class="add-btn">Ajouter</button>
-      </div>
-    </div>
-  `;
-  card.querySelector('.add-btn').addEventListener('click', () => {
-    cartCount++;
-    cartCountEl.textContent = cartCount;
-    toast(`${p.title} ajouté au panier`);
-  });
-  perfumeGrid.appendChild(card);
+document.getElementById('checkout-btn').addEventListener('click', () => {
+  if(Object.keys(cart).length === 0){ toast('Votre panier est vide'); return; }
+  closeCart();
+  openModal('payment-modal');
 });
 
-fashionItems.forEach(p => {
-  const card = document.createElement('div');
-  card.className = 'fashion-card';
-  card.innerHTML = `
-    <div class="fashion-visual">
-      <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
-        <rect x="14" y="10" width="32" height="55" rx="4" fill="#D9948A" opacity="0.9"/>
-        <rect x="20" y="0" width="20" height="14" rx="4" fill="#251E1C"/>
-      </svg>
-    </div>
-    <div class="fashion-body">
-      <div class="fashion-cat">${p.cat}</div>
-      <div class="fashion-title">${p.title}</div>
-      <div class="fashion-footer">
-        <span class="price mono">${p.price}</span>
-        <button class="mini-add" aria-label="Ajouter">+</button>
-      </div>
-    </div>
-  `;
-  card.querySelector('.mini-add').addEventListener('click', () => {
-    cartCount++;
-    cartCountEl.textContent = cartCount;
-    toast(`${p.title} ajouté au panier`);
+function buyNow(p){
+  addToCart(p);
+  pulseCart();
+  closeCart();
+  openModal('payment-modal');
+}
+
+let lastInvoice = null;
+document.getElementById('continue-payment').addEventListener('click', () => {
+  const ids = Object.keys(cart);
+  let total = 0;
+  const lines = ids.map(id => {
+    const p = allProducts[id]; const qty = cart[id]; total += qty*p.price;
+    return {title:p.title, qty, subtotal: qty*p.price};
   });
-  fashionGrid.appendChild(card);
+  const method = methods.find(m => m.id === selectedMethod);
+  const invNumber = 'FW-' + Date.now().toString().slice(-6);
+  lastInvoice = {invNumber, date: new Date().toLocaleDateString('fr-FR'), lines, total, method};
+  renderInvoice(lastInvoice);
+  closeModal('payment-modal');
+  openModal('invoice-modal');
 });
 
+function renderInvoice(inv){
+  document.getElementById('inv-meta').innerHTML = `Facture ${inv.invNumber}<br>${inv.date}`;
+  const linesEl = document.getElementById('inv-lines');
+  linesEl.innerHTML = inv.lines.map(l => `<div class="inv-line"><span>${l.qty}x ${l.title}</span><span class="mono">${l.subtotal.toFixed(2).replace('.',',')} €</span></div>`).join('');
+  document.getElementById('inv-total').textContent = inv.total.toFixed(2).replace('.',',') + ' €';
+  const instrEl = document.getElementById('inv-instructions');
+  if(inv.method.id === 'whatsapp'){
+    instrEl.innerHTML = `<div class="pay-instructions">Cliquez sur "Envoyer sur WhatsApp" pour finaliser votre commande directement avec nous.</div>`;
+  } else {
+    instrEl.innerHTML = `<div class="pay-instructions">Envoyez <strong>${inv.total.toFixed(2).replace('.',',')} €</strong> via <strong>${inv.method.name}</strong> au numéro <span class="num">${inv.method.sub}</span>, puis cliquez sur "Envoyer sur WhatsApp" avec votre confirmation.</div>`;
+  }
+}
+
+document.getElementById('inv-send-btn').addEventListener('click', () => {
+  if(!lastInvoice) return;
+  const inv = lastInvoice;
+  let lines = [`Bonjour Fibis Web, voici ma commande ${inv.invNumber} :`];
+  inv.lines.forEach(l => lines.push(`- ${l.qty}x ${l.title} (${l.subtotal.toFixed(2).replace('.',',')} €)`));
+  lines.push(`Total : ${inv.total.toFixed(2).replace('.',',')} €`);
+  lines.push(`Mode de paiement : ${inv.method.name}`);
+  if(inv.method.id !== 'whatsapp') lines.push(`J'ai effectué le paiement, voici ma preuve.`);
+  const msg = encodeURIComponent(lines.join('\n'));
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+});
+
+// band tabs scroll
+document.querySelectorAll('.band-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.band-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const target = document.getElementById(tab.getAttribute('data-target'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+
+// chat bubble
+const chatBubble = document.getElementById('chat-bubble');
+const chatPanel = document.getElementById('chat-panel');
+chatBubble.addEventListener('click', () => chatPanel.classList.toggle('open'));
+document.getElementById('chat-send').addEventListener('click', sendChat);
+document.getElementById('chat-input').addEventListener('keypress', (e) => { if(e.key==='Enter') sendChat(); });
+function sendChat(){
+  const input = document.getElementById('chat-input');
+  const val = input.value.trim();
+  if(!val) return;
+  const msg = encodeURIComponent(`Bonjour Fibis Web, ${val}`);
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
+  input.value = '';
+}
+
+// toast
 function toast(msg){
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -516,12 +1046,11 @@ function toast(msg){
   window._toastTimer = setTimeout(()=> t.classList.remove('show'), 2200);
 }
 
-document.querySelectorAll('.band-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.band-tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-  });
-});
+// scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('in'); observer.unobserve(entry.target); } });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
