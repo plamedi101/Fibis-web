@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fibis Web — Parfums d'Égypte, Mode & Accessoires | Livraison Égypte & Kinshasa</title>
-<meta name="description" content="Fibis Web : parfums et huiles essentielles d'Égypte, vêtements et accessoires. Paiement M-Pesa et Orange Money. Livraison en Égypte et à Kinshasa.">
+<title>Fibis Shop — Parfums d'Égypte, Mode & Accessoires | Livraison Égypte & Kinshasa</title>
+<meta name="description" content="Fibis Shop : parfums et huiles essentielles d'Égypte, vêtements et accessoires. Paiement M-Pesa et Orange Money. Livraison en Égypte et à Kinshasa.">
 <meta name="keywords" content="parfums Égypte, huiles essentielles, vêtements wax, accessoires, M-Pesa, Orange Money, Kinshasa, Égypte">
-<meta property="og:title" content="Fibis Web — Votre oasis de parfums et de style">
+<meta property="og:title" content="Fibis Shop — Votre oasis de parfums et de style">
 <meta property="og:description" content="Parfums et huiles essentielles d'Égypte, vêtements et accessoires. Livraison en Égypte et à Kinshasa.">
 <meta property="og:type" content="website">
 <meta name="robots" content="index, follow">
@@ -97,10 +97,12 @@
     width:220px;height:220px;border-radius:50%;border:1.5px solid var(--gold);
     display:flex;align-items:center;justify-content:center;margin:0 auto;position:relative;
   }
-  .seal-inner{width:180px;height:180px;border-radius:50%;border:1px dashed var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;}
-  .seal-inner .top{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
-  .seal-inner .mid{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--sand2);}
-  .seal-inner .bot{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+  .seal-ring{position:absolute;top:0;left:0;width:100%;height:100%;animation:sealSpin 18s linear infinite;}
+  .seal-inner{width:180px;height:180px;border-radius:50%;border:1px solid rgba(198,161,91,0.35);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:7px;position:relative;z-index:2;background:radial-gradient(circle,rgba(11,61,55,0.4),transparent 70%);}
+  .seal-inner .top{font-family:'Playfair Display',serif;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+  .seal-inner .mid{font-family:'Playfair Display',serif;font-size:27px;font-style:italic;color:var(--sand2);line-height:1.15;}
+  .seal-inner .bot{font-family:'Playfair Display',serif;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+  @keyframes sealSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
 
   .wave{display:block;width:100%;line-height:0;}
   .wave svg{width:100%;height:80px;}
@@ -359,14 +361,14 @@
     #invoice-modal .modal-box{box-shadow:none;max-width:100%;}
     .modal-close, .inv-actions{display:none !important;}
   }
-  @media(prefers-reduced-motion:reduce){*{transition:none !important;}}
+  @media(prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important;}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <div class="logo"><img src="images/fibis-logo-header.jpg" alt="Fibis Web"></div>
+    <div class="logo"><img src="images/fibis-logo-header.jpg" alt="Fibis Shop"></div>
     <div class="nav-links">
       <a href="#parfums">Parfums</a>
       <a href="#boutique">Boutique</a>
@@ -409,7 +411,7 @@
   <div class="modal-box inv-box">
     <button class="modal-close" data-close="invoice-modal">✕</button>
     <div class="inv-header">
-      <img src="images/fibis-logo-header.jpg" alt="Fibis Web" class="inv-logo">
+      <img src="images/fibis-logo-header.jpg" alt="Fibis Shop" class="inv-logo">
       <div class="inv-meta" id="inv-meta"></div>
     </div>
     <div class="inv-customer" id="inv-customer"></div>
@@ -431,7 +433,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
 </div>
 <div id="chat-panel">
-  <div class="chat-head">Fibis Web — Discutons</div>
+  <div class="chat-head">Fibis Shop — Discutons</div>
   <div class="chat-body">
     <div class="chat-bubble-msg">Bonjour ! Une question sur un parfum, un article, ou une commande ? Écrivez-nous, on répond vite sur WhatsApp.</div>
   </div>
@@ -448,7 +450,7 @@
     <div>
       <div class="eyebrow">Parfums d'Égypte & mode d'ailleurs</div>
       <h1>Votre oasis de parfums<br><em>et de style.</em></h1>
-      <p>Fibis Web réunit des parfums et huiles essentielles distillés en Égypte, et une sélection de vêtements et accessoires. Livraison en Égypte et à Kinshasa, paiement M-Pesa ou Orange Money.</p>
+      <p>Fibis Shop réunit des parfums et huiles essentielles distillés en Égypte, et une sélection de vêtements et accessoires. Livraison en Égypte et à Kinshasa, paiement M-Pesa ou Orange Money.</p>
       <div class="hero-ctas">
         <a href="#parfums" class="btn-gold">Découvrir les parfums</a>
         <a href="#boutique" class="btn-line">Voir la boutique</a>
@@ -460,8 +462,11 @@
       </div>
     </div>
     <div class="seal">
+      <svg class="seal-ring" viewBox="0 0 220 220">
+        <circle cx="110" cy="110" r="104" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="3 9" stroke-linecap="round"/>
+      </svg>
       <div class="seal-inner">
-        <span class="top">Fibis Web</span>
+        <span class="top">Fibis Shop</span>
         <span class="mid">Boutique<br>Premium</span>
         <span class="bot">Édition Oasis</span>
       </div>
@@ -525,7 +530,7 @@
 <div class="wrap">
 <section id="galerie">
   <div class="section-head reveal">
-    <div><h2>Coup de cœur</h2><p>Un aperçu de l'univers Fibis Web — vos photos viendront remplacer ces visuels.</p></div>
+    <div><h2>Coup de cœur</h2><p>Un aperçu de l'univers Fibis Shop — vos photos viendront remplacer ces visuels.</p></div>
   </div>
   <div class="gallery-grid reveal" id="gallery-grid"></div>
   <p class="gallery-note">Illustrations provisoires — à remplacer par vos vraies photos produit dès que possible.</p>
@@ -538,7 +543,7 @@
     <div>
       <div class="eyebrow" style="color:var(--gold)">Notre histoire</div>
       <h2>Un parfum d'ailleurs, un style qui voyage.</h2>
-      <p>Fibis Web est né de l'envie de faire voyager deux mondes : les essences précieuses d'Égypte, et une mode qui raconte une origine. Chaque flacon, chaque pièce est choisie avec soin.</p>
+      <p>Fibis Shop est né de l'envie de faire voyager deux mondes : les essences précieuses d'Égypte, et une mode qui raconte une origine. Chaque flacon, chaque pièce est choisie avec soin.</p>
     </div>
     <div>
       <p>Sincère et sans intermédiaire inutile — chaque commande est suivie personnellement, du paiement jusqu'à la livraison, avec une facture claire à chaque étape.</p>
@@ -622,7 +627,7 @@
       <textarea name="message" class="nl-message" rows="3" placeholder="Une question, une envie particulière ? Écrivez-nous ici (facultatif)"></textarea>
       <label class="nl-check">
         <input type="checkbox" name="consentement" value="oui">
-        <span>J'accepte de recevoir des offres et actualités de Fibis Web et de ses partenaires sélectionnés par email. Je peux me désinscrire à tout moment.</span>
+        <span>J'accepte de recevoir des offres et actualités de Fibis Shop et de ses partenaires sélectionnés par email. Je peux me désinscrire à tout moment.</span>
       </label>
       <button type="submit" class="btn-gold">Envoyer</button>
     </form>
@@ -633,7 +638,7 @@
 <footer id="contact">
   <div class="wrap">
     <div class="foot-top">
-      <div class="foot-col"><h4>Fibis Web</h4><p style="max-width:240px;">Parfums et huiles essentielles d'Égypte, vêtements et accessoires.</p></div>
+      <div class="foot-col"><h4>Fibis Shop</h4><p style="max-width:240px;">Parfums et huiles essentielles d'Égypte, vêtements et accessoires.</p></div>
       <div class="foot-col"><h4>Boutique</h4><a href="#parfums">Parfums & huiles</a><a href="#boutique">Mode & accessoires</a></div>
       <div class="foot-col"><h4>Infos</h4><a href="#paiement">Paiement</a><a href="#faq">FAQ</a></div>
       <div class="foot-col">
@@ -643,7 +648,7 @@
         <p>Livraison en Égypte et à Kinshasa</p>
       </div>
     </div>
-    <div class="foot-bottom"><span>© 2026 Fibis Web</span><span class="mono">Votre oasis de style</span></div>
+    <div class="foot-bottom"><span>© 2026 Fibis Shop</span><span class="mono">Votre oasis de style</span></div>
   </div>
 </footer>
 
@@ -822,10 +827,10 @@ renderProductGrid(fashionItems, 'fashion-grid', 'fashion');
 
 // gallery (illustrated placeholders)
 const galleryData = [
-  {cls:'tall', cap:"Fibis — Extrait de Parfum", color:'#C6A15B', img:'images/fibis-signature-specs.jpg'},
-  {cls:'wide', cap:"Mode wax", color:'#4FBBA6'},
-  {cls:'', cap:"Accessoires", color:'#1F7A6C'},
-  {cls:'', cap:"Huiles essentielles", color:'#8F7434'},
+  {cls:'tall', cap:"Fibis — Extrait de Parfum", color:'#C6A15B', img:'images/fibis-signature-specs.jpg', pos:'center'},
+  {cls:'', cap:"Style Fibis Shop", color:'#4FBBA6', img:'images/fibis-model-1.jpg', pos:'center 15%'},
+  {cls:'', cap:"L'esprit de la marque", color:'#1F7A6C', img:'images/fibis-model-2.jpg', pos:'center 15%'},
+  {cls:'wide', cap:"Mode wax", color:'#8F7434'},
   {cls:'wide', cap:"Édition Oasis", color:'#0B3D37'},
 ];
 const galleryGrid = document.getElementById('gallery-grid');
@@ -833,7 +838,7 @@ galleryData.forEach(g => {
   const item = document.createElement('div');
   item.className = 'g-item reveal ' + g.cls;
   const visual = g.img
-    ? `<img src="${g.img}" alt="${g.cap}" style="width:100%;height:100%;object-fit:cover;">`
+    ? `<img src="${g.img}" alt="${g.cap}" style="width:100%;height:100%;object-fit:cover;object-position:${g.pos || 'center'};">`
     : `<svg width="100%" height="100%" viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice">
         <rect width="300" height="220" fill="${g.color}" opacity="0.16"/>
         <circle cx="150" cy="100" r="50" fill="${g.color}" opacity="0.35"/>
@@ -893,7 +898,7 @@ document.getElementById('review-submit').addEventListener('click', () => {
   }
   reviews.unshift({name, loc:'', stars:selectedStars, quote:text});
   renderTestimonials();
-  const waMsg = encodeURIComponent(`Nouvel avis Fibis Web\nNote : ${selectedStars}/5\nNom : ${name}\nAvis : ${text}`);
+  const waMsg = encodeURIComponent(`Nouvel avis Fibis Shop\nNote : ${selectedStars}/5\nNom : ${name}\nAvis : ${text}`);
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}`, '_blank');
   document.getElementById('review-name').value = '';
   document.getElementById('review-text').value = '';
@@ -1022,7 +1027,7 @@ document.getElementById('continue-payment').addEventListener('click', () => {
 
 function renderInvoice(inv){
   document.getElementById('inv-meta').innerHTML = `Facture<br><strong>${inv.invNumber}</strong><br>${inv.date}`;
-  document.getElementById('inv-customer').innerHTML = `<strong>${escapeHtml(inv.customerName)}</strong>Client Fibis Web`;
+  document.getElementById('inv-customer').innerHTML = `<strong>${escapeHtml(inv.customerName)}</strong>Client Fibis Shop`;
   const linesEl = document.getElementById('inv-lines');
   linesEl.innerHTML = inv.lines.map(l => `<div class="inv-line"><span>${escapeHtml(l.title)}</span><span class="mono">${l.qty}</span><span class="mono">${l.unit.toFixed(2).replace('.',',')} €</span><span class="mono">${l.subtotal.toFixed(2).replace('.',',')} €</span></div>`).join('');
   document.getElementById('inv-total').textContent = inv.total.toFixed(2).replace('.',',') + ' €';
@@ -1037,7 +1042,7 @@ function renderInvoice(inv){
 document.getElementById('inv-send-btn').addEventListener('click', () => {
   if(!lastInvoice) return;
   const inv = lastInvoice;
-  let lines = [`Bonjour Fibis Web, voici ma commande ${inv.invNumber} :`, `Nom : ${inv.customerName}`];
+  let lines = [`Bonjour Fibis Shop, voici ma commande ${inv.invNumber} :`, `Nom : ${inv.customerName}`];
   inv.lines.forEach(l => lines.push(`- ${l.qty}x ${l.title} (${l.subtotal.toFixed(2).replace('.',',')} €)`));
   lines.push(`Total : ${inv.total.toFixed(2).replace('.',',')} €`);
   lines.push(`Mode de paiement : ${inv.method.name}`);
@@ -1066,7 +1071,7 @@ function sendChat(){
   const input = document.getElementById('chat-input');
   const val = input.value.trim();
   if(!val) return;
-  const msg = encodeURIComponent(`Bonjour Fibis Web, ${val}`);
+  const msg = encodeURIComponent(`Bonjour Fibis Shop, ${val}`);
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
   input.value = '';
 }
