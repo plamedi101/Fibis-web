@@ -177,7 +177,6 @@
   .g-item.tall{grid-row:span 2;}
   .g-item.wide{grid-column:span 2;}
   .g-cap{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(180deg,transparent,rgba(11,61,55,0.75));color:#fff;font-family:'Playfair Display',serif;font-size:15px;font-style:italic;}
-  .gallery-note{margin-top:20px;font-size:12px;color:#8a8375;text-align:center;}
 
   .signature-banner{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:8px;overflow:hidden;background:var(--deep);box-shadow:0 20px 50px rgba(11,61,55,0.18);}
   .signature-visual{position:relative;overflow:hidden;background:#0a0a0a;}
@@ -297,6 +296,7 @@
   .modal-box .sub{font-size:13px;color:#5c6862;margin-bottom:22px;}
   .pm-label{font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#5c6862;display:block;margin-bottom:8px;}
   .pm-input{width:100%;padding:12px 16px;border:1px solid var(--line-l);border-radius:6px;font-family:inherit;font-size:14px;background:var(--sand);margin-bottom:20px;}
+  .pm-textarea{resize:vertical;min-height:56px;}
   .method-option{display:flex;align-items:center;gap:14px;border:1px solid var(--line-l);border-radius:6px;padding:16px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;}
   .method-option:hover, .method-option.selected{border-color:var(--gold);}
   .method-icon{width:40px;height:40px;border-radius:50%;background:var(--deep);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:14px;flex-shrink:0;}
@@ -402,6 +402,8 @@
     <p class="sub">Renseignez vos coordonnées, puis choisissez votre mode de paiement.</p>
     <label class="pm-label">Nom complet</label>
     <input type="text" id="customer-name" class="pm-input" placeholder="Votre nom complet">
+    <label class="pm-label">Adresse de livraison</label>
+    <textarea id="customer-address" class="pm-input pm-textarea" rows="2" placeholder="Adresse complète, ville, pays"></textarea>
     <div id="method-list"></div>
     <button class="continue-btn" id="continue-payment">Continuer</button>
   </div>
@@ -533,7 +535,6 @@
     <div><h2>Coup de cœur</h2><p>Un aperçu de l'univers Fibis Shop — vos photos viendront remplacer ces visuels.</p></div>
   </div>
   <div class="gallery-grid reveal" id="gallery-grid"></div>
-  <p class="gallery-note">Illustrations provisoires — à remplacer par vos vraies photos produit dès que possible.</p>
 </section>
 </div>
 
@@ -1014,8 +1015,13 @@ document.getElementById('continue-payment').addEventListener('click', () => {
   const ids = Object.keys(cart);
   if(ids.length === 0){ toast('Votre panier est vide'); return; }
   const customerName = document.getElementById('customer-name').value.trim().slice(0,80);
+  const customerAddress = document.getElementById('customer-address').value.trim().slice(0,200);
   if(!customerName){
     toast('Indiquez votre nom complet pour continuer');
+    return;
+  }
+  if(!customerAddress){
+    toast('Indiquez votre adresse de livraison pour continuer');
     return;
   }
   let total = 0;
@@ -1025,7 +1031,7 @@ document.getElementById('continue-payment').addEventListener('click', () => {
   });
   const method = methods.find(m => m.id === selectedMethod);
   const invNumber = 'FW-' + Date.now().toString().slice(-6);
-  lastInvoice = {invNumber, date: new Date().toLocaleDateString('fr-FR'), customerName, lines, total, method};
+  lastInvoice = {invNumber, date: new Date().toLocaleDateString('fr-FR'), customerName, customerAddress, lines, total, method};
   renderInvoice(lastInvoice);
   closeModal('payment-modal');
   openModal('invoice-modal');
@@ -1033,7 +1039,7 @@ document.getElementById('continue-payment').addEventListener('click', () => {
 
 function renderInvoice(inv){
   document.getElementById('inv-meta').innerHTML = `Facture<br><strong>${inv.invNumber}</strong><br>${inv.date}`;
-  document.getElementById('inv-customer').innerHTML = `<strong>${escapeHtml(inv.customerName)}</strong>Client Fibis Shop`;
+  document.getElementById('inv-customer').innerHTML = `<strong>${escapeHtml(inv.customerName)}</strong>Livraison : ${escapeHtml(inv.customerAddress)}`;
   const linesEl = document.getElementById('inv-lines');
   linesEl.innerHTML = inv.lines.map(l => `<div class="inv-line"><span>${escapeHtml(l.title)}</span><span class="mono">${l.qty}</span><span class="mono">${l.unit.toFixed(2).replace('.',',')} €</span><span class="mono">${l.subtotal.toFixed(2).replace('.',',')} €</span></div>`).join('');
   document.getElementById('inv-total').textContent = inv.total.toFixed(2).replace('.',',') + ' €';
@@ -1050,7 +1056,7 @@ function renderInvoice(inv){
 document.getElementById('inv-send-btn').addEventListener('click', () => {
   if(!lastInvoice) return;
   const inv = lastInvoice;
-  let lines = [`Bonjour Fibis Shop, voici ma commande ${inv.invNumber} :`, `Nom : ${inv.customerName}`];
+  let lines = [`Bonjour Fibis Shop, voici ma commande ${inv.invNumber} :`, `Nom : ${inv.customerName}`, `Livraison : ${inv.customerAddress}`];
   inv.lines.forEach(l => lines.push(`- ${l.qty}x ${l.title} (${l.subtotal.toFixed(2).replace('.',',')} €)`));
   lines.push(`Total : ${inv.total.toFixed(2).replace('.',',')} €`);
   lines.push(`Mode de paiement : ${inv.method.name}`);
