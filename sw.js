@@ -3,8 +3,8 @@ const CORE_ASSETS = [
   './',
   './index.html',
   './manifest.json',
-  './images/icon-192.png',
-  './images/icon-512.png',
+  './icon-192.png',
+  './icon-512.png',
   './images/fibis-logo-header.jpg'
 ];
 
