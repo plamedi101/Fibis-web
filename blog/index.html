@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Fibis Shop | Parfums, mode et culture d'Égypte</title>
+<meta name="description" content="Le blog Fibis Shop : histoire des parfums d'Égypte, conseils mode et beauté, culture égyptienne. Découvrez nos articles.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--deep:#0B3D37;--deep2:#123F39;--gold:#C6A15B;--gold-deep:#8F7434;--sand:#F7F1E3;--sand2:#FFFDF7;--ink:#132523;--line-l:rgba(19,37,35,0.12);--line-d:rgba(247,241,227,0.16);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--sand);color:var(--ink);font-family:'Jost',sans-serif;line-height:1.6;}
+  h1,h2{font-family:'Playfair Display',serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:900px;margin:0 auto;padding:0 32px;}
+  header{background:var(--deep);color:var(--sand2);padding:20px 32px;}
+  .nav{display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto;}
+  .logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;}
+  .logo em{color:var(--gold);font-style:italic;}
+  .back-link{font-size:13px;font-weight:600;border:1px solid var(--line-d);border-radius:100px;padding:8px 16px;}
+  .back-link:hover{border-color:var(--gold);color:var(--gold);}
+  .hero{padding:60px 0 40px;text-align:center;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--gold-deep);font-weight:600;margin-bottom:18px;}
+  .hero h1{font-size:clamp(30px,4vw,44px);margin-bottom:14px;}
+  .hero p{font-size:15px;color:#5c6862;max-width:520px;margin:0 auto;}
+  .articles{padding:20px 0 80px;display:flex;flex-direction:column;gap:22px;}
+  .article-card{background:var(--sand2);border:1px solid var(--line-l);border-radius:10px;padding:30px;transition:transform .25s ease, box-shadow .25s ease;}
+  .article-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(11,61,55,0.1);}
+  .article-tag{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--gold-deep);font-weight:700;margin-bottom:10px;}
+  .article-card h2{font-size:22px;margin-bottom:10px;}
+  .article-card p{font-size:14px;color:#5c6862;margin-bottom:14px;}
+  .read-more{font-size:13px;font-weight:700;color:var(--deep);}
+  footer{background:var(--deep);color:var(--sand2);padding:30px 0;text-align:center;font-size:13px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">Fibis <em>Shop</em></div>
+    <a href="../index.html" class="back-link">← Retour à la boutique</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Le journal Fibis Shop</div>
+    <h1>Parfums, style et culture d'Égypte</h1>
+    <p>Des articles pour découvrir l'univers derrière nos produits — histoire, conseils, et inspirations.</p>
+  </div>
+
+  <div class="articles">
+    <a href="histoire-des-parfums-egyptiens.html" class="article-card">
+      <div class="article-tag">Histoire</div>
+      <h2>L'histoire du parfum en Égypte : des pharaons aux essences d'aujourd'hui</h2>
+      <p>Comment une tradition vieille de 5000 ans continue de façonner les parfums que nous vendons aujourd'hui.</p>
+      <span class="read-more">Lire l'article →</span>
+    </a>
+
+    <a href="comment-faire-durer-son-parfum.html" class="article-card">
+      <div class="article-tag">Conseils</div>
+      <h2>5 conseils pour faire durer votre parfum plus longtemps</h2>
+      <p>Des gestes simples pour profiter de votre fragrance préférée toute la journée.</p>
+      <span class="read-more">Lire l'article →</span>
+    </a>
+  </div>
+</div>
+
+<footer>© 2026 Fibis Shop — Le journal</footer>
+</body>
+</html>
